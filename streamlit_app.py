@@ -455,7 +455,7 @@ button,input{font-family:inherit} button{cursor:pointer}
 .brand{font-size:9px;font-weight:900;letter-spacing:1.4px}
 .app-title{margin-top:3px;font-size:23px;font-weight:900}
 .coin-pill{display:flex;align-items:center;gap:5px;padding:8px 12px;border:1px solid rgba(255,255,255,.17);border-radius:18px;background:rgba(255,255,255,.13);font-size:12px;font-weight:900}
-.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px}
+.nav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}
 .nav-btn{padding:8px 3px;border:0;border-radius:14px;background:transparent;color:rgba(255,255,255,.72);font-size:10px;font-weight:900;transition:.2s}
 .nav-btn.active{background:#4d291c;color:#fff;box-shadow:0 4px 9px rgba(0,0,0,.18)}
 .nav-btn:active{transform:scale(.95)}
@@ -528,7 +528,7 @@ button,input{font-family:inherit} button{cursor:pointer}
 .scope-buttons{display:grid;grid-template-columns:1.05fr repeat(5,1fr);gap:5px;margin-bottom:8px}
 .scope-btn{min-height:37px;padding:5px 2px;border:1px solid rgba(124,83,43,.16);border-radius:12px;background:#f3e2be;color:#5a412e;font-size:8px;font-weight:900;line-height:1.2;box-shadow:0 3px 7px rgba(69,43,20,.09)}
 .scope-btn.active{background:linear-gradient(180deg,#65ae4b,#368e3d);color:#fff;border-color:transparent;box-shadow:0 5px 12px rgba(47,139,58,.25)}
-.learn-panel{margin-bottom:8px;padding:9px;border-radius:13px;background:linear-gradient(145deg,#fff8df,#f3dfb2);border:1px solid rgba(124,83,43,.13)}.learn-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.learn-title{font-size:10px;font-weight:900}.learn-pill{padding:4px 7px;border-radius:11px;background:#fff;color:#8b6139;font-size:8px;font-weight:900}.learn-desc{margin-top:5px;color:#6f4f38;font-size:8px;line-height:1.45;font-weight:800}.learn-progress{height:8px;margin-top:7px;overflow:hidden;border-radius:12px;background:#dcc79f}.learn-fill{width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#62aa49,#ffd44f);transition:width .25s}.learn-status{margin-top:6px;font-size:8px;line-height:1.45;font-weight:900;color:#4b3324}.learn-steps{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:7px}.learn-step{padding:5px 4px;border-radius:9px;background:rgba(255,255,255,.58);color:#806047;font-size:7px;font-weight:900;text-align:center}.learn-step.done{background:#e7f4d9;color:#2f8b3a}.learn-step.active{background:#fff;color:#ef8c32;box-shadow:0 2px 6px rgba(89,56,26,.12)}.learn-btn{width:100%;min-height:34px;margin-top:7px;border:0;border-radius:11px;background:linear-gradient(90deg,#ef8c32,#ffb24b);color:#fff;font-size:10px;font-weight:900;box-shadow:0 5px 10px rgba(239,140,50,.22)}.learn-btn.ready{background:linear-gradient(90deg,#4a9b42,#75b84e)}.locked-area{opacity:.45;filter:grayscale(.15)}.condition-panel{margin-bottom:8px;padding:8px;border-radius:13px;background:#fff2cf;border:1px solid rgba(124,83,43,.12)}
+.learn-panel{position:relative;z-index:40;margin-bottom:8px;padding:9px;border-radius:13px;background:linear-gradient(145deg,#fff8df,#f3dfb2);border:1px solid rgba(124,83,43,.13)}.learn-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.learn-title{font-size:10px;font-weight:900}.learn-pill{padding:4px 7px;border-radius:11px;background:#fff;color:#8b6139;font-size:8px;font-weight:900}.learn-desc{margin-top:5px;color:#6f4f38;font-size:8px;line-height:1.45;font-weight:800}.learn-progress{height:8px;margin-top:7px;overflow:hidden;border-radius:12px;background:#dcc79f}.learn-fill{width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#62aa49,#ffd44f);transition:width .25s}.learn-status{margin-top:6px;font-size:8px;line-height:1.45;font-weight:900;color:#4b3324}.learn-steps{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:7px}.learn-step{padding:5px 4px;border-radius:9px;background:rgba(255,255,255,.58);color:#806047;font-size:7px;font-weight:900;text-align:center}.learn-step.done{background:#e7f4d9;color:#2f8b3a}.learn-step.active{background:#fff;color:#ef8c32;box-shadow:0 2px 6px rgba(89,56,26,.12)}.learn-btn{position:relative;z-index:80;pointer-events:auto!important;width:100%;min-height:34px;margin-top:7px;border:0;border-radius:11px;background:linear-gradient(90deg,#ef8c32,#ffb24b);color:#fff;font-size:10px;font-weight:900;box-shadow:0 5px 10px rgba(239,140,50,.22)}.learn-btn.ready{background:linear-gradient(90deg,#4a9b42,#75b84e)}.locked-area{opacity:.45;filter:grayscale(.15)}.condition-panel{margin-bottom:8px;padding:8px;border-radius:13px;background:#fff2cf;border:1px solid rgba(124,83,43,.12)}
 .condition-title{margin-bottom:7px;font-size:10px;font-weight:900;color:#6f4f38;line-height:1.4}
 .condition-row{display:grid;grid-template-columns:.7fr 1fr .7fr 1fr;gap:6px;align-items:center}.condition-row label{font-size:9px;font-weight:900;color:#6c4a2f}.condition-select{width:100%;min-height:34px;border:1px solid rgba(124,83,43,.22);border-radius:10px;background:#fffaf0;color:#4b3324;font-size:10px;font-weight:900;padding:0 7px}.predict-condition-grid{display:grid;grid-template-columns:.72fr 1fr .72fr 1fr;gap:6px;align-items:center;margin-top:8px}.predict-condition-grid label{font-size:9px;font-weight:900;color:#6c4a2f;white-space:nowrap}.condition-help{font-size:9px;line-height:1.5;color:#8a6a45;margin:7px 0 0;font-weight:800}.first-learn-note{padding:8px 9px;border-radius:11px;background:rgba(255,255,255,.58);font-size:10px;line-height:1.55;color:#6f4f38}.predict-btn{width:100%;min-height:36px;margin-top:8px;border:0;border-radius:11px;background:linear-gradient(90deg,#4a9b42,#75b84e);color:#fff;font-size:11px;font-weight:900;box-shadow:0 5px 10px rgba(47,139,58,.2)}.predict-loading{margin-top:6px;min-height:18px;font-size:9px;line-height:1.45;color:#745431;font-weight:800}.predict-loading.active{color:#2f8b3a}
 .selected-plan{display:grid;grid-template-columns:1fr .9fr;gap:7px;align-items:stretch}.plan-summary{padding:9px;border-radius:12px;background:#fff4d5;font-size:9px;line-height:1.55;font-weight:800}.plan-summary strong{color:#2f8b3a}.plan-soc{padding:9px;border-radius:12px;background:#f0e0be;text-align:center;font-weight:900}.plan-soc-label{font-size:8px;color:#79583e}.plan-soc-value{margin-top:2px;color:#ef573f;font-size:22px;line-height:1}.plan-soc-sub{margin-top:4px;font-size:8px;color:#76553e;line-height:1.35}.start-clean-primary{width:100%;min-height:46px;margin-top:9px;border:0;border-radius:14px;background:linear-gradient(90deg,#ef8c32,#f2a84d);color:#fff;font-size:13px;font-weight:950;letter-spacing:-.2px;box-shadow:0 7px 15px rgba(239,140,50,.26)}.start-clean-primary:disabled{opacity:.55;filter:grayscale(.12);box-shadow:none}.start-clean-primary small{display:block;margin-top:2px;font-size:9px;font-weight:800;color:rgba(255,255,255,.88)}
@@ -545,6 +545,17 @@ button,input{font-family:inherit} button{cursor:pointer}
 .weekly{padding:15px 14px}.bar-chart{height:190px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:17px 5px 0}.bar-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}.bar{width:100%;max-width:32px;border-radius:12px 12px 5px 5px;background:linear-gradient(180deg,#66b449,#138b35);transform-origin:bottom;animation:barGrow .65s ease-out}.bar-value{margin-bottom:4px;color:#426d32;font-size:8px;font-weight:900}.bar-label{margin-top:5px;font-size:9px;font-weight:900}
 .record-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}.record-card{min-height:90px;padding:14px;border:1px solid rgba(136,87,40,.14);border-radius:16px;background:rgba(255,248,231,.96);box-shadow:var(--shadow)}.record-label{color:#6e503a;font-size:9px;font-weight:900}.record-value{margin-top:7px;color:#31241b;font-size:23px;font-weight:900}
 .events{margin-top:9px;padding:15px 14px}.event-item{display:grid;grid-template-columns:43px 1fr;gap:8px;padding:11px 0;border-bottom:1px solid rgba(122,87,51,.12)}.event-item:last-child{border-bottom:0}.event-time{color:#946c43;font-size:9px;font-weight:900}.event-content strong{display:block;margin-bottom:3px;font-size:10px}.event-content span{color:#785a43;font-size:9px;line-height:1.4;font-weight:700}
+
+
+/* Event page placeholder */
+.event-hero{padding:16px 14px;margin-bottom:9px;background:linear-gradient(145deg,#fff8e8,#f5dfa9)}
+.event-hero-title{font-size:18px;font-weight:950;color:#4b3324;margin-bottom:8px}
+.event-hero-desc{font-size:12px;line-height:1.55;font-weight:800;color:#76533b}
+.event-placeholder-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.event-placeholder-card{min-height:112px;padding:14px;border-radius:16px;background:rgba(255,248,231,.96);box-shadow:var(--shadow);border:1px solid rgba(136,87,40,.14)}
+.event-placeholder-icon{font-size:30px;margin-bottom:8px}
+.event-placeholder-title{font-size:13px;font-weight:950;color:#4b3324}
+.event-placeholder-text{margin-top:5px;font-size:11px;line-height:1.45;font-weight:800;color:#7b5a3e}
 
 /* Reward */
 .level-panel{padding:17px 15px;text-align:center;background:linear-gradient(145deg,#fff3cc,#ffd98a)}.level-robot{font-size:72px;animation:float 2s ease-in-out infinite}.level-number{margin-top:5px;font-size:25px;font-weight:900}.level-track{height:11px;margin:12px 10px 5px;overflow:hidden;border-radius:10px;background:rgba(126,85,39,.18)}.level-fill{width:55%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#ff7f35,#ffd244)}.level-caption{font-size:9px;font-weight:900}
@@ -617,7 +628,7 @@ body,button,input,select{font-size:15px!important;}
 .brand{font-size:13px!important;}
 .app-title{font-size:32px!important;}
 .coin-pill{font-size:17px!important;padding:10px 14px!important;}
-.nav{gap:8px!important;margin-top:14px!important;}
+.nav{gap:6px!important;margin-top:14px!important;}
 .nav-btn{font-size:14px!important;min-height:42px!important;padding:9px 4px!important;}
 .section-kicker{font-size:12px!important;}
 .section-title{font-size:30px!important;}
@@ -737,8 +748,8 @@ body,button,input,select{
 .brand{font-size:11px!important;letter-spacing:1.2px!important;}
 .app-title{font-size:29px!important;line-height:1.08!important;}
 .coin-pill{font-size:14px!important;padding:9px 13px!important;}
-.nav{margin-top:11px!important;gap:8px!important;}
-.nav-btn{font-size:12px!important;min-height:36px!important;padding:8px 4px!important;border-radius:16px!important;}
+.nav{margin-top:11px!important;gap:6px!important;}
+.nav-btn{font-size:11px!important;min-height:36px!important;padding:8px 2px!important;border-radius:16px!important;}
 #homePage .room{
   flex:0 0 330px!important;
   height:330px!important;
@@ -859,6 +870,13 @@ body,button,input,select{
   #homePage .room{flex-basis:315px!important;height:315px!important;min-height:315px!important;}
 }
 
+/* CTA click safety: keep the first-learning button above decorative layers */
+#learnPanel{position:relative!important;z-index:60!important;}
+#learnBtn{position:relative!important;z-index:9999!important;pointer-events:auto!important;touch-action:manipulation!important;isolation:isolate!important;}
+.learn-panel,.plan-panel,.home-dashboard{position:relative!important;}
+.learn-panel{z-index:80!important;}
+.condition-panel{position:relative!important;z-index:10!important;}
+
 
 /* ===== Compact learning/profile summary cards ===== */
 .compact-note{padding:9px 10px!important;line-height:1.35!important;}
@@ -903,6 +921,132 @@ body,button,input,select{
 .flow-guide.done{border-left-color:#2f8b3a;background:linear-gradient(145deg,#eff9e8,#fff7dc);}
 .flow-guide.charging{border-left-color:#f2a84d;background:linear-gradient(145deg,#fff2d2,#fff8e8);}
 .toast{min-width:260px;text-align:center;line-height:1.45;}
+
+/* ===== Reward closet: equipped items stay on Roboking ===== */
+.robot-accessory{
+  position:absolute;
+  z-index:34;
+  left:50%;
+  transform:translateX(-50%);
+  pointer-events:none;
+  display:none;
+  filter:drop-shadow(0 4px 4px rgba(64,38,18,.22));
+}
+.robot.has-custom-head .crown{display:none!important;}
+.robot-head-deco{
+  top:-38px;
+  min-width:104px;
+  height:62px;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:43px;
+  line-height:1;
+}
+.robot-head-deco.show{display:flex;animation:decoPop .34s ease-out;}
+.robot-head-deco.ribbon{top:-35px;font-size:48px;}
+/* 모자는 로보킹 머리 위에 실제로 얹힌 느낌이 나도록 낮게 배치 */
+.robot-head-deco.hat{
+  top:-38px;
+  font-size:66px;
+  height:58px;
+  transform:translateX(-58%) rotate(-10deg);
+  filter:drop-shadow(0 4px 4px rgba(64,38,18,.18));
+}
+/* 토끼/고양이는 동물 이모지가 아니라 로보킹 자체에 귀가 붙는 장착형 레이어 */
+.robot-head-deco.ears{top:-42px;width:138px;height:78px;min-width:138px;}
+.robot-head-deco.ears.show{display:block;animation:decoPop .34s ease-out;}
+.robo-ear{position:absolute;z-index:2;bottom:4px;filter:drop-shadow(0 3px 3px rgba(64,38,18,.16));}
+.robot-head-deco.bunny .robo-ear{
+  width:22px;height:62px;border:3px solid #fff;border-radius:16px 16px 12px 12px;
+  background:linear-gradient(180deg,#fff 0%,#f1edf8 100%);
+}
+.robot-head-deco.bunny .robo-ear:after{
+  content:"";position:absolute;left:50%;top:8px;width:9px;height:43px;transform:translateX(-50%);
+  border-radius:12px;background:linear-gradient(180deg,#ffb5ce,#ffd7e5);
+}
+.robot-head-deco.bunny .robo-ear.left{left:36px;transform:rotate(-8deg);transform-origin:bottom center;}
+.robot-head-deco.bunny .robo-ear.right{right:36px;transform:rotate(8deg);transform-origin:bottom center;}
+.robot-head-deco.cat .robo-ear{
+  width:36px;
+  height:34px;
+  bottom:6px;
+  background:linear-gradient(180deg,#ffbd4a 0%,#ff922e 82%,#f07725 100%);
+  clip-path:polygon(50% 0,4% 100%,96% 100%);
+  border-radius:8px;
+  filter:drop-shadow(0 3px 3px rgba(64,38,18,.22));
+}
+.robot-head-deco.cat .robo-ear:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:6px;
+  width:16px;
+  height:16px;
+  transform:translateX(-50%);
+  background:linear-gradient(180deg,#ffd6a7,#ff8f80);
+  clip-path:polygon(50% 0,8% 100%,92% 100%);
+}
+.robot-head-deco.cat .robo-ear.left{left:20px;transform:rotate(-16deg);transform-origin:bottom center;}
+.robot-head-deco.cat .robo-ear.right{right:20px;transform:rotate(16deg);transform-origin:bottom center;}
+.robot-aura-deco{
+  position:absolute;
+  z-index:5;
+  inset:-42px -46px -22px -46px;
+  pointer-events:none;
+  display:none;
+}
+.robot-aura-deco.show{display:block;}
+.robot-aura-deco span{
+  position:absolute;
+  font-size:22px;
+  filter:drop-shadow(0 3px 3px rgba(64,38,18,.18));
+  animation:decoTwinkle 1.6s ease-in-out infinite;
+}
+.robot-aura-deco span:nth-child(1){left:7px;top:35px;animation-delay:.1s;}
+.robot-aura-deco span:nth-child(2){right:2px;top:22px;animation-delay:.45s;}
+.robot-aura-deco span:nth-child(3){right:18px;bottom:22px;animation-delay:.8s;}
+.robot-aura-deco span:nth-child(4){left:22px;bottom:10px;animation-delay:1.05s;}
+.level-robot-preview{position:relative;display:inline-grid;place-items:center;min-width:112px;min-height:94px;margin:0 auto;}
+.level-robot-preview .preview-base{font-size:72px;line-height:1;animation:float 2s ease-in-out infinite;}
+.preview-head,.preview-aura{position:absolute;pointer-events:none;}
+.preview-head{top:-4px;left:50%;transform:translateX(-50%);font-size:35px;filter:drop-shadow(0 3px 3px rgba(64,38,18,.18));}
+.preview-head.hat{top:-9px;transform:translateX(-56%) rotate(-10deg);font-size:48px;}
+.preview-head.ears{top:-13px;width:92px;height:48px;}
+.preview-head.ears .p-ear{position:absolute;bottom:0;filter:drop-shadow(0 2px 2px rgba(64,38,18,.14));}
+.preview-head.bunny .p-ear{width:13px;height:42px;border:2px solid #fff;border-radius:12px;background:#f5f1fb;}
+.preview-head.bunny .p-ear:after{content:"";position:absolute;left:50%;top:6px;width:5px;height:29px;transform:translateX(-50%);border-radius:8px;background:#ffc2d7;}
+.preview-head.bunny .p-ear.left{left:24px;transform:rotate(-8deg)}.preview-head.bunny .p-ear.right{right:24px;transform:rotate(8deg)}
+.preview-head.cat .p-ear{width:24px;height:22px;background:linear-gradient(180deg,#ffbd4a,#ff922e 85%);clip-path:polygon(50% 0,4% 100%,96% 100%);}
+.preview-head.cat .p-ear:after{content:"";position:absolute;left:50%;bottom:3px;width:10px;height:10px;transform:translateX(-50%);background:linear-gradient(180deg,#ffd6a7,#ff8f80);clip-path:polygon(50% 0,8% 100%,92% 100%);}
+.preview-head.cat .p-ear.left{left:13px;transform:rotate(-15deg)}.preview-head.cat .p-ear.right{right:13px;transform:rotate(15deg)}
+.preview-aura{inset:0;font-size:18px;animation:decoTwinkle 1.5s ease-in-out infinite;}
+.preview-aura .a1{position:absolute;left:2px;top:15px}.preview-aura .a2{position:absolute;right:0;top:28px}.preview-aura .a3{position:absolute;right:12px;bottom:12px}
+.reward-btn.equipped{background:linear-gradient(90deg,#4a9b42,#75b84e)!important;color:#fff!important;}
+.reward-btn.owned{background:#fff2cf!important;color:#5c422f!important;border:1px solid rgba(124,83,43,.18)!important;}
+.reward-card.owned{background:rgba(255,253,240,.98)!important;border-color:rgba(75,155,66,.22)!important;}
+.reward-card.equipped{box-shadow:0 0 0 2px rgba(75,155,66,.2), var(--shadow)!important;}
+.reward-status{margin-top:5px;color:#4a9b42;font-size:10px;font-weight:950;min-height:13px;}
+
+.reward-folder-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0 9px;}
+.reward-folder-btn{min-height:43px;border:1px solid rgba(124,83,43,.18);border-radius:14px;background:rgba(255,248,231,.9);color:#6f4f38;font-size:13px;font-weight:950;box-shadow:0 4px 10px rgba(79,48,21,.1);}
+.reward-folder-btn.active{background:linear-gradient(90deg,#4a9b42,#75b84e);color:#fff;border-color:transparent;}
+.reward-panel{display:block;}
+.reward-panel.hidden{display:none;}
+.coupon-card{min-height:178px;text-align:left;display:flex;flex-direction:column;align-items:stretch;}
+.coupon-card .reward-icon{text-align:center;font-size:34px;line-height:1.05;}
+.coupon-card .reward-title{text-align:center;line-height:1.25;min-height:32px;display:flex;align-items:center;justify-content:center;}
+.coupon-card .reward-desc{font-size:10.5px;line-height:1.5;text-align:left;min-height:58px;}
+.coupon-benefit{margin-top:7px;padding:7px 8px;border-radius:10px;background:#fff2cf;color:#6f4f38;font-size:10px;font-weight:900;line-height:1.35;text-align:left;min-height:42px;display:flex;align-items:center;}
+.coupon-card .reward-status{min-height:15px;text-align:center;}
+.coupon-card .reward-btn{margin-top:auto;min-height:42px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.coupon-card.owned{border-color:rgba(75,155,66,.24);background:rgba(255,253,240,.98);}
+.reward-btn.need-coins{background:#efe0bc!important;color:#6f4f38!important;}
+.reward-btn.need-coins:after{content:"";}
+
+@keyframes decoPop{from{opacity:0;transform:translateX(-50%) translateY(8px) scale(.7)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+@keyframes decoTwinkle{0%,100%{opacity:.45;transform:scale(.88) rotate(-8deg)}50%{opacity:1;transform:scale(1.12) rotate(8deg)}}
 
 /* ===== Room status cleanup: avoid speech overlap + show current robot 배터리 ===== */
 #homePage .room .mode-chip{
@@ -997,6 +1141,7 @@ body,button,input,select{
         <button class="nav-btn active" data-page="homePage">홈</button>
         <button class="nav-btn" data-page="batteryPage">배터리</button>
         <button class="nav-btn" data-page="recordPage">기록</button>
+        <button class="nav-btn" data-page="eventPage">이벤트</button>
         <button class="nav-btn" data-page="rewardPage">리워드</button>
       </nav>
     </header>
@@ -1008,18 +1153,22 @@ body,button,input,select{
           <div class="wall-light"></div><div class="floor"></div>
           <div class="plant">🪴</div><div class="house"></div><div class="sofa"></div>
           <div class="speech" id="speech"><strong>배가 든든해요!</strong><br>청소를 준비할게요!</div>
-          <div class="mode-chip" id="modeChip">✨ 로보킹 권장 충전 81%</div>
+          <div class="mode-chip" id="modeChip">✨ 로보킹 맞춤 준비</div>
           <div class="rug"></div>
           <div class="clean-path"><div class="clean-fill" id="cleanFill"></div></div>
           <div class="charge-ring"></div>
           <div class="dust"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
           <div class="robot" id="robot" data-action="pet">
-            <div class="crown">👑</div><div class="spark" id="spark">✨</div><div class="robot-top"></div>
+            <div class="robot-aura-deco" id="robotAuraDeco"><span>✨</span><span>✨</span><span>✨</span><span>✨</span></div>
+            <div class="crown">👑</div>
+            <div class="robot-accessory robot-head-deco" id="robotHeadDeco"></div>
+            <div class="spark" id="spark">✨</div><div class="robot-top"></div>
             <div class="face">
               <div class="eye left"></div><div class="eye right"></div>
               <div class="cheek left"></div><div class="cheek right"></div><div class="mouth"></div>
             </div>
+            <div class="robot-accessory robot-body-deco" id="robotBodyDeco"></div>
             <div class="slot"></div>
           </div>
           <div class="robot-soc-badge" id="robotSocBadge"><span>🔋 현재 배터리</span><b>20%</b></div>
@@ -1058,7 +1207,7 @@ body,button,input,select{
               <div class="learn-progress"><div class="learn-fill" id="learnFill"></div></div>
               <div class="learn-status" id="learnStatus">1회차 학습 청소를 시작하면 로보킹이 집 구조와 구역 정보를 자동으로 기록해요.</div>
               <div class="learn-steps" id="learnSteps"></div>
-              <button class="learn-btn" id="learnBtn" data-action="startFirstMapping">🏠 1회차 학습 청소 시작</button>
+              <button type="button" class="learn-btn" id="learnBtn" data-action="startFirstMapping" onpointerdown="window.__forceStartFirstMapping && window.__forceStartFirstMapping(event);" onmousedown="window.__forceStartFirstMapping && window.__forceStartFirstMapping(event);" ontouchstart="window.__forceStartFirstMapping && window.__forceStartFirstMapping(event);" onclick="window.__forceStartFirstMapping && window.__forceStartFirstMapping(event);">🏠 1회차 학습 청소 시작</button>
             </div>
             <div class="condition-panel" id="conditionPanel">
               <div class="condition-title" id="conditionTitle">1회차 학습 청소로 우리 집 정보를 먼저 만들어요</div>
@@ -1123,9 +1272,9 @@ body,button,input,select{
             <div class="selected-plan">
               <div class="plan-summary" id="planSummary">집 전체 청소 조건을 분석 중입니다.</div>
               <div class="plan-soc">
-                <div class="plan-soc-label">권장 충전량</div>
+                <div class="plan-soc-label">충전 준비</div>
                 <div class="plan-soc-value"><span id="planTargetSoc">81</span>%</div>
-                <div class="plan-soc-sub" id="planSocSub">청소 후 여유 배터리까지 반영</div>
+                <div class="plan-soc-sub" id="planSocSub">필요한 만큼만 충전</div>
               </div>
             </div>
             <button class="start-clean-primary" id="startCleanPrimary" data-action="clean" disabled>
@@ -1145,12 +1294,12 @@ body,button,input,select{
 
           <div class="home-cards">
             <section class="mini-card">
-              <div class="mini-title">배터리 상태</div>
-              <div class="battery-info">15%~90% 사이에서<br>사용하는 것이<br>수명 연장에 좋아요!</div>
+              <div class="mini-title">배터리 컨디션</div>
+              <div class="battery-info">너무 배부르거나<br>너무 배고프지 않게<br>로보킹이 알아서 관리해요!</div>
               <div class="battery-face" id="batteryFace">😊</div>
               <div class="scale"><div class="pointer" id="pointer"></div></div>
               <div class="scale-labels"><span>0%</span><span>15%</span><span>90%</span><span>100%</span></div>
-              <div class="battery-message" id="batteryMessage">배터리 상태가 좋아요.</div>
+              <div class="battery-message" id="batteryMessage">배터리 컨디션이 좋아요.</div>
             </section>
 
             <section class="mini-card time-card">
@@ -1178,7 +1327,7 @@ body,button,input,select{
             <div class="gauge" id="socGauge" style="--value:81;--color:#49a646">
               <div class="gauge-content"><div class="gauge-label">배터리</div><div class="gauge-value" id="socGaugeText">81%</div></div>
             </div>
-            <div class="gauge-desc">권장 운용 구간<br>15%~90%</div>
+            <div class="gauge-desc">건강하게 쓰는<br>배터리 구간</div>
           </div>
 
           <div class="panel gauge-card">
@@ -1191,16 +1340,16 @@ body,button,input,select{
 
         <div class="panel control">
           <div class="control-row">
-            <div class="control-head"><span>권장 충전량 조절</span><span class="control-value" id="targetLabel">81%</span></div>
+            <div class="control-head"><span>맞춤 충전 조절</span><span class="control-value" id="targetLabel">81%</span></div>
             <input id="targetSlider" type="range" min="15" max="90" value="81">
-            <div class="control-caption"><span>15%</span><span>배터리 보호 권장</span><span>90%</span></div>
+            <div class="control-caption"><span>15%</span><span>오래 쓰기 추천</span><span>90%</span></div>
           </div>
           <div class="control-row">
             <div class="control-head"><span>온도 시뮬레이션</span><span class="control-value" id="tempLabel">29℃</span></div>
             <input id="tempSlider" type="range" min="15" max="50" value="29">
             <div class="control-caption"><span>15℃</span><span>현재 배터리 온도</span><span>50℃</span></div>
           </div>
-          <button class="primary-btn" data-action="chargeFromBattery">로보킹 권장량까지 맞춤 충전</button>
+          <button class="primary-btn" data-action="chargeFromBattery">로보킹 맞춤 충전하기</button>
         </div>
 
         <div class="panel chart-panel">
@@ -1248,9 +1397,45 @@ body,button,input,select{
         <div class="panel events">
           <div class="panel-title">이벤트 기록</div>
           <div id="eventList">
-            <div class="event-item"><div class="event-time">14:20</div><div class="event-content"><strong>맞춤 충전 완료</strong><span>권장량 81%에서 자동으로 멈췄습니다.</span></div></div>
-            <div class="event-item"><div class="event-time">10:15</div><div class="event-content"><strong>사용자 패턴 분석</strong><span>거실 청소 필요 소비량 27%를 반영했습니다.</span></div></div>
-            <div class="event-item"><div class="event-time">08:40</div><div class="event-content"><strong>배터리 상태 정상</strong><span>배터리 온도와 건강도가 안정 범위에 있습니다.</span></div></div>
+            <div class="event-item"><div class="event-time">14:20</div><div class="event-content"><strong>맞춤 충전 완료</strong><span>필요한 만큼만 채우고 자동으로 멈췄습니다.</span></div></div>
+            <div class="event-item"><div class="event-time">10:15</div><div class="event-content"><strong>청소 준비 완료</strong><span>거실 상태에 맞춰 로보킹이 준비했습니다.</span></div></div>
+            <div class="event-item"><div class="event-time">08:40</div><div class="event-content"><strong>배터리 컨디션 정상</strong><span>배터리 온도와 건강도가 안정 범위에 있습니다.</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="eventPage">
+        <div class="section-kicker">EVENT</div>
+        <div class="section-title">이벤트</div>
+
+        <div class="panel event-hero">
+          <div class="event-hero-title">이벤트 페이지 준비 중</div>
+          <div class="event-hero-desc">
+            이 페이지는 팀원이 추가로 수정할 공간이에요.<br>
+            앞으로 부품 상태 확인, 배터리 케어 내역, 출퇴근 맞춤 청소, 미션, 사진첩 같은 기능을 이곳에 확장할 수 있어요.
+          </div>
+        </div>
+
+        <div class="event-placeholder-grid">
+          <div class="event-placeholder-card">
+            <div class="event-placeholder-icon">🧩</div>
+            <div class="event-placeholder-title">부품 상태 확인</div>
+            <div class="event-placeholder-text">필터, 브러시, 물걸레 패드 상태를 보여줄 예정이에요.</div>
+          </div>
+          <div class="event-placeholder-card">
+            <div class="event-placeholder-icon">📌</div>
+            <div class="event-placeholder-title">케어 이벤트 기록</div>
+            <div class="event-placeholder-text">배터리를 어떻게 아껴 썼는지 내역으로 남길 예정이에요.</div>
+          </div>
+          <div class="event-placeholder-card">
+            <div class="event-placeholder-icon">🚶</div>
+            <div class="event-placeholder-title">출퇴근 맞춤 청소</div>
+            <div class="event-placeholder-text">사용자의 생활 패턴에 맞춘 청소 예약 기능을 넣을 수 있어요.</div>
+          </div>
+          <div class="event-placeholder-card">
+            <div class="event-placeholder-icon">📷</div>
+            <div class="event-placeholder-title">미션·사진첩</div>
+            <div class="event-placeholder-text">오늘의 미션과 분실물 사진첩을 연결할 수 있어요.</div>
           </div>
         </div>
       </section>
@@ -1260,17 +1445,35 @@ body,button,input,select{
         <div class="section-title">로보킹 성장 리워드</div>
 
         <div class="panel level-panel">
-          <div class="level-robot">🤖</div>
+          <div class="level-robot-preview" id="levelRobotPreview"><span class="preview-base">🤖</span></div>
           <div class="level-number">Lv. <span id="levelText">13</span></div>
           <div class="level-track"><div class="level-fill" id="expFill"></div></div>
           <div class="level-caption">경험치 <span id="expText">55</span> / 100</div>
         </div>
 
-        <div class="reward-grid">
-          <div class="reward-card"><div class="reward-icon">🥣</div><div class="reward-title">에너지 간식</div><div class="reward-desc">배터리를 12% 채워줘요.</div><button class="reward-btn" data-action="buyFood">50 코인</button></div>
-          <div class="reward-card"><div class="reward-icon">🎀</div><div class="reward-title">빨간 리본</div><div class="reward-desc">로보킹을 꾸며주세요.</div><button class="reward-btn" data-action="ribbon">미리보기</button></div>
-          <div class="reward-card"><div class="reward-icon">🧢</div><div class="reward-title">탐험가 모자</div><div class="reward-desc">청소 미션 전용 아이템입니다.</div><button class="reward-btn" data-action="hat">120 코인</button></div>
-          <div class="reward-card"><div class="reward-icon">✨</div><div class="reward-title">반짝이 효과</div><div class="reward-desc">청소 완료 효과를 변경합니다.</div><button class="reward-btn" data-action="sparkle">효과 체험</button></div>
+        <div class="reward-folder-tabs">
+          <button class="reward-folder-btn active" id="rewardTabItems" data-action="rewardTabItems">꾸미기 아이템</button>
+          <button class="reward-folder-btn" id="rewardTabCoupons" data-action="rewardTabCoupons">LG 혜택 쿠폰</button>
+        </div>
+
+        <div class="reward-panel" id="rewardItemsPanel">
+          <div class="reward-grid">
+            <div class="reward-card" id="cardFood"><div class="reward-icon">🥣</div><div class="reward-title">에너지 간식</div><div class="reward-desc">먹으면 배터리가 조금 회복돼요.</div><div class="reward-status" id="statusFood"></div><button class="reward-btn" id="btnFood" data-action="buyFood">50 코인</button></div>
+            <div class="reward-card" id="cardRibbon"><div class="reward-icon">🎀</div><div class="reward-title">빨간 리본</div><div class="reward-desc">머리 위에 귀엽게 달아줘요.</div><div class="reward-status" id="statusRibbon"></div><button class="reward-btn" id="btnRibbon" data-action="itemRibbon">60 코인</button></div>
+            <div class="reward-card" id="cardHat"><div class="reward-icon">🧢</div><div class="reward-title">탐험가 모자</div><div class="reward-desc">로보킹 머리에 딱 맞게 씌워줘요.</div><div class="reward-status" id="statusHat"></div><button class="reward-btn" id="btnHat" data-action="itemHat">120 코인</button></div>
+            <div class="reward-card" id="cardSparkle"><div class="reward-icon">✨</div><div class="reward-title">반짝이 오라</div><div class="reward-desc">로보킹 주변이 반짝여요.</div><div class="reward-status" id="statusSparkle"></div><button class="reward-btn" id="btnSparkle" data-action="itemSparkle">80 코인</button></div>
+            <div class="reward-card" id="cardBunny"><div class="reward-icon">🐰</div><div class="reward-title">토끼 귀</div><div class="reward-desc">로보킹 머리에 토끼 귀가 쏙!</div><div class="reward-status" id="statusBunny"></div><button class="reward-btn" id="btnBunny" data-action="itemBunny">90 코인</button></div>
+            <div class="reward-card" id="cardCat"><div class="reward-icon">🐱</div><div class="reward-title">고양이 귀</div><div class="reward-desc">새침한 고양이 로보킹으로 변신!</div><div class="reward-status" id="statusCat"></div><button class="reward-btn" id="btnCat" data-action="itemCat">70 코인</button></div>
+          </div>
+        </div>
+
+        <div class="reward-panel hidden" id="rewardCouponsPanel">
+          <div class="reward-grid">
+            <div class="reward-card coupon-card" id="cardCouponLg5"><div class="reward-icon">🎟</div><div class="reward-title">LG 생활가전 5% 쿠폰</div><div class="reward-desc">LG 생활가전 1개를 구매할 때 사용할 수 있는 기본 할인 쿠폰이에요.</div><div class="coupon-benefit">혜택: 단일 제품 5% 할인</div><div class="reward-status" id="statusCouponLg5"></div><button class="reward-btn" id="btnCouponLg5" data-action="couponLg5">300 코인</button></div>
+            <div class="reward-card coupon-card" id="cardCouponCleanKit"><div class="reward-icon">🧹</div><div class="reward-title">로보킹 클린 키트 쿠폰</div><div class="reward-desc">필터, 브러시, 물걸레 패드처럼 자주 바꾸는 소모품을 준비할 때 사용해요.</div><div class="coupon-benefit">혜택: 소모품 키트 구매 할인</div><div class="reward-status" id="statusCouponCleanKit"></div><button class="reward-btn" id="btnCouponCleanKit" data-action="couponCleanKit">180 코인</button></div>
+            <div class="reward-card coupon-card" id="cardCouponBatteryCare"><div class="reward-icon">🔋</div><div class="reward-title">배터리 케어 쿠폰</div><div class="reward-desc">로보킹을 오래 쓰기 위해 배터리 점검이나 관리 서비스를 받을 때 사용해요.</div><div class="coupon-benefit">혜택: 배터리 점검/케어 서비스</div><div class="reward-status" id="statusCouponBatteryCare"></div><button class="reward-btn" id="btnCouponBatteryCare" data-action="couponBatteryCare">250 코인</button></div>
+            <div class="reward-card coupon-card" id="cardCouponMoveIn"><div class="reward-icon">🏠</div><div class="reward-title">이사·입주 패키지 쿠폰</div><div class="reward-desc">새집에 필요한 LG 생활가전을 2개 이상 함께 구매할 때 추가 혜택을 받아요.</div><div class="coupon-benefit">혜택: 2개 이상 구매 시 패키지 추가 할인</div><div class="reward-status" id="statusCouponMoveIn"></div><button class="reward-btn" id="btnCouponMoveIn" data-action="couponMoveIn">300 코인</button></div>
+          </div>
         </div>
       </section>
 
@@ -1308,6 +1511,25 @@ const $=(id)=>document.getElementById(id);
 const clamp=(v,min,max)=>Math.min(Math.max(v,min),max);
 const fmtSoc=(v)=>Number(v || 0).toFixed(1).replace(/\.0$/,"");
 const cleanMinutes=()=>Math.max(0,Math.round(state.soc*.56));
+
+// ============================================================
+// 배터리 보호/학습 주행 기준값
+// 최근 UX 문구 수정 과정에서 이 상수들이 빠지면
+// 1회차 학습 버튼 클릭 시 startFirstMapping() 내부에서 ReferenceError가 발생합니다.
+// 그래서 사용자에게 숫자를 직접 노출하지 않더라도, 내부 로직에는 반드시 유지합니다.
+// ============================================================
+const MIN_RESERVE_SOC = 15;
+const MAX_CHARGE_SOC = 90;
+const MAX_SINGLE_PASS_USE = MAX_CHARGE_SOC - MIN_RESERVE_SOC;
+const CRITICAL_DOCK_SOC = MIN_RESERVE_SOC;
+const targetFromRequired = (required)=>clamp(Math.ceil(Number(required||0)+MIN_RESERVE_SOC),MIN_RESERVE_SOC,MAX_CHARGE_SOC);
+const expectedEndSoc = (startSoc,required)=>Math.round((Number(startSoc||0)-Number(required||0))*10)/10;
+
+const MIN_SOC_AFTER_LEARNING = MIN_RESERVE_SOC;
+const MIN_LEARNING_SOC_USE = 5;
+const MAX_LEARNING_SOC_USE = 30;
+const LEARNING_SOC_RATIO = 0.35;
+
 function setGuide(message,tone="normal"){
   state.userGuide=message;
   state.userGuideTone=tone;
@@ -1318,36 +1540,17 @@ function setGuide(message,tone="normal"){
   }
 }
 function guideForCurrentState(){
-  if(state.mapping)return "로보킹이 집 구조와 바닥 상태를 배우는 중이에요. 학습 중 배터리가 조금 사용됩니다.";
-  if(!state.profileReady)return "<b>1단계</b> 1회차 학습 청소를 눌러 우리 집 정보를 저장해 주세요.";
-  if(state.profileReady && !state.predicted)return "<b>2단계</b> 오늘 청소 조건을 선택한 뒤 로보킹에게 준비를 맡겨 주세요.";
-  if(state.charging)return "권장량 <b>"+state.targetSoc+"%</b>까지만 맞춤 충전 중이에요. 충전이 끝나면 청소를 시작할 수 있습니다.";
-  if(state.cleaning)return "청소 중이에요. 끝난 뒤에도 배터리가 너무 부족해지지 않도록 로보킹이 알아서 관리합니다.";
-  if(state.celebrating || state.missionDone)return "청소가 완료됐어요. 기록 탭에서 청소 결과를 확인할 수 있습니다.";
-  if(state.predicted && state.soc<state.targetSoc)return "<b>3단계</b> 현재 배터리는 " + state.soc + "%이고 목표는 " + state.targetSoc + "%. 필요한 만큼만 충전하면 청소할 수 있어요.";
-  if(state.predicted)return "<b>3단계</b> 지금 배터리로 청소할 수 있어요. 청소 미션 수행하기를 누르면 시작됩니다.";
+  if(state.mapping)return "로보킹이 우리 집을 배우는 중이에요. 집 구조와 바닥 상태를 차근차근 기억하고 있어요.";
+  if(!state.profileReady)return "<b>1단계</b> 먼저 1회차 학습 청소로 우리 집을 알려주세요.";
+  if(state.profileReady && !state.predicted)return "<b>2단계</b> 오늘 청소 조건을 고르면 로보킹이 알아서 준비해요.";
+  if(state.charging)return "로보킹이 잠깐 쉬면서 힘을 채우고 있어요. 필요한 만큼 채우면 알아서 멈춰요.";
+  if(state.cleaning)return "청소 중이에요. 배터리가 무리하지 않도록 로보킹이 알아서 조절하고 있어요.";
+  if(state.celebrating || state.missionDone)return "청소가 끝났어요! 로보킹이 배터리를 아끼며 마무리했어요.";
+  if(state.predicted && state.soc<state.targetSoc)return "<b>3단계</b> 지금은 로보킹이 조금 더 힘을 채우면 좋아요. 아래 버튼을 누르면 필요한 만큼만 충전하고 출발해요.";
+  if(state.predicted)return "<b>3단계</b> 지금 바로 출동할 수 있어요. 청소 미션 수행하기를 눌러 주세요.";
   return state.userGuide||"현재 상태를 확인 중입니다.";
 }
 
-// 배터리 보호 기준
-// - 청소 종료 후 최소 15%는 반드시 남긴다.
-// - 목표 충전 배터리는 배터리 수명 보호를 위해 최대 90%까지만 허용한다.
-// - 따라서 한 번에 안전하게 수행 가능한 최대 청소 소모량은 75%이다.
-const MIN_RESERVE_SOC=15;
-const MAX_CHARGE_SOC=90;
-const MAX_SINGLE_PASS_USE=MAX_CHARGE_SOC-MIN_RESERVE_SOC;
-const CRITICAL_DOCK_SOC=MIN_RESERVE_SOC;
-const targetFromRequired=(required)=>clamp(Math.ceil(Number(required||0)+MIN_RESERVE_SOC),MIN_RESERVE_SOC,MAX_CHARGE_SOC);
-const expectedEndSoc=(startSoc,required)=>Math.round((Number(startSoc||0)-Number(required||0))*10)/10;
-
-// 1회차 학습 청소는 전체 집을 완전 청소하는 단계가 아니라
-// 집 구조/구역/바닥/오염도 정보를 수집하는 시범 학습 주행으로 처리합니다.
-// 따라서 기록의 전체 청소 필요 배터리를 그대로 차감하지 않고,
-// 학습 주행용 소비량으로 축소 계산하며 최소 잔량을 남깁니다.
-const MIN_SOC_AFTER_LEARNING=MIN_RESERVE_SOC;
-const MIN_LEARNING_SOC_USE=5;
-const MAX_LEARNING_SOC_USE=30;
-const LEARNING_SOC_RATIO=0.35;
 function getLearningSocUse(run,startSoc){
   const fullRequired=Math.max(0,Number(run&&run.home?run.home.requiredSoc:0));
   const available=Math.max(0,Number(startSoc||0)-MIN_SOC_AFTER_LEARNING);
@@ -1366,11 +1569,61 @@ const todayStateLabels={normal:"평소와 같음",dust:"먼지 많음",pet:"반�
 const intensityAliases={fast:["약","중"],standard:["중","강"],careful:["강","터보"]};
 const todayStateAliases={normal:"학습 프로필 기준",dust:"오염도 높은 조건",pet:"오염도 높음 + 강한 흡입 조건",obstacle:"장애물 많은 조건"};
 
+const closetDefault={
+  owned:{ribbon:false,hat:false,bunny:false,cat:false,sparkle:false},
+  equipped:{head:"crown",aura:null}
+};
+const shopItems={
+  ribbon:{name:"빨간 리본",icon:"🎀",cost:60,slot:"head",value:"ribbon",message:"빨간 리본을 달아줬어요! 로보킹이 더 사랑스러워졌어요."},
+  hat:{name:"탐험가 모자",icon:"🧢",cost:120,slot:"head",value:"hat",message:"탐험가 모자를 씌워줬어요! 이제 진짜 모험가 로보킹이에요."},
+  bunny:{name:"토끼 귀",icon:"🐰",cost:90,slot:"head",value:"bunny",message:"토끼 귀를 달아줬어요! 로보킹이 통통 튀는 기분이에요."},
+  cat:{name:"고양이 귀",icon:"🐱",cost:70,slot:"head",value:"cat",message:"고양이 귀를 달아줬어요! 로보킹이 더 새침해졌어요."},
+  sparkle:{name:"반짝이 오라",icon:"✨",cost:80,slot:"aura",value:"sparkle",message:"반짝이 오라를 켰어요! 청소할 때마다 기분이 좋아져요."}
+};
+
+const couponItems={
+  lg5:{name:"LG 생활가전 5% 쿠폰",icon:"🎟",cost:300,benefit:"LG 생활가전 1개 구매 시 5% 할인",message:"LG 생활가전 5% 쿠폰을 보관함에 담았어요."},
+  cleanKit:{name:"로보킹 클린 키트 쿠폰",icon:"🧹",cost:180,benefit:"필터·브러시·물걸레 패드 등 소모품 키트 할인",message:"로보킹 클린 키트 쿠폰을 보관함에 담았어요."},
+  batteryCare:{name:"배터리 케어 쿠폰",icon:"🔋",cost:250,benefit:"배터리 점검 또는 관리 서비스 혜택",message:"배터리 케어 쿠폰을 보관함에 담았어요."},
+  moveIn:{name:"이사·입주 패키지 쿠폰",icon:"🏠",cost:300,benefit:"LG 생활가전 2개 이상 구매 시 패키지 추가 혜택",message:"이사·입주 패키지 쿠폰을 보관함에 담았어요."}
+};
+function loadCoupons(){
+  try{
+    const raw=localStorage.getItem("lgRoboCareCouponsV1");
+    const defaults={lg5:0,cleanKit:0,batteryCare:0,moveIn:0};
+    if(!raw)return defaults;
+    return Object.assign(defaults,JSON.parse(raw)||{});
+  }catch(e){return {lg5:0,cleanKit:0,batteryCare:0,moveIn:0};}
+}
+function saveCoupons(){
+  try{localStorage.setItem("lgRoboCareCouponsV1",JSON.stringify(state.ownedCoupons));}catch(e){}
+}
+
+function loadCloset(){
+  try{
+    const raw=localStorage.getItem("lgRoboCareClosetV2");
+    if(!raw)return JSON.parse(JSON.stringify(closetDefault));
+    const saved=JSON.parse(raw);
+    const owned=Object.assign({},closetDefault.owned,saved.owned||{});
+    // 이전 버전에서 하트 스티커를 샀다면 고양이 귀 보유로 자연스럽게 이전합니다.
+    if(saved.owned && saved.owned.heart && !owned.cat)owned.cat=true;
+    const equipped=Object.assign({},closetDefault.equipped,saved.equipped||{});
+    if(equipped.decal==="heart" && (!equipped.head || equipped.head==="crown"))equipped.head="cat";
+    delete equipped.decal;
+    return {owned,equipped};
+  }catch(e){return JSON.parse(JSON.stringify(closetDefault));}
+}
+function saveCloset(){
+  try{localStorage.setItem("lgRoboCareClosetV2",JSON.stringify({owned:state.ownedItems,equipped:state.equippedItems}));}catch(e){}
+}
+const initialCloset=loadCloset();
+const initialCoupons=loadCoupons();
+
 function pickRandomRun(candidates){
   if(!candidates || candidates.length===0)return null;
 
   // 현재 화면에 떠 있는 global_run_id와 같은 시나리오는 가능하면 제외
-  // 같은 조건으로 1회차 학습 청소를 다시 실행할 때 매번 다른 집 정보이 나오게 하기 위함
+  // 같은 조건으로 1회차 학습 청소를 다시 실행할 때 매번 다른 집 정보가 나오게 하기 위함
   let pool = candidates;
   if(activeRun && activeRun.globalRunId && candidates.length>1){
     const filtered = candidates.filter(r=>String(r.globalRunId)!==String(activeRun.globalRunId));
@@ -1451,6 +1704,10 @@ const state={
   firstRunStartSoc:predictionData.currentSoc,
   firstRunEndSoc:predictionData.currentSoc,
   firstRunSocEnough:true,
+  ownedItems:initialCloset.owned,
+  equippedItems:initialCloset.equipped,
+  rewardTab:"items",
+  ownedCoupons:initialCoupons,
   temperature:29,health:100,heart:100,
   level:13,exp:55,coins:50,food:1,cleaning:false,charging:false,
   celebrating:false,progress:0,missionDone:false,cleanCount:0,
@@ -1495,7 +1752,7 @@ function render(){
     robotSocBadge.innerHTML="<span>🔋 현재 배터리</span><b>"+state.soc+"%</b>";
   }
 
-  renderPlan();renderHome();renderBattery();renderRecord();renderReward();
+  renderAccessories();renderPlan();renderHome();renderBattery();renderRecord();renderReward();
 }
 
 function getScenario(scope,zoneNumber=null){
@@ -1633,7 +1890,7 @@ function findMlScenarioFromChoices(choices){
   const pool=scenarioPoolForChoices(choices);
   if(!pool.length){
     const fallback=Object.assign({},baseScenario);
-    fallback.matchNote="저장된 우리 집 기록을 기준으로 계산";
+    fallback.matchNote="저장된 우리 집 기록으로 준비";
     return fallback;
   }
 
@@ -1663,7 +1920,7 @@ function findMlScenarioFromChoices(choices){
   scenario.matchBasis="청소 방식·오염도·장애물 상태 반영";
 
   if(choices.cleanMode==="both" && getCleanModeCandidateValue(scenario)!=="both"){
-    scenario.matchNote="복합 청소에 가까운 물걸레 기록을 기준으로 계산";
+    scenario.matchNote="비슷한 청소 기록으로 준비";
   }
   return scenario;
 }
@@ -1704,8 +1961,8 @@ function syncScenarioToState(scenario){
 function predictSocFromConditions(){
   if(state.cleaning||state.charging||state.mapping){showToast("학습/청소/충전이 끝난 뒤 다시 준비할 수 있어요.");return}
   if(!state.profileReady){
-    setGuide("아직 집 정보이 없어요. 먼저 1회차 학습 청소를 실행해 주세요.","warning");
-    showToast("먼저 1회차 학습 청소가 필요합니다.");
+    setGuide("아직 로보킹이 우리 집을 잘 몰라요. 먼저 1회차 학습 청소를 시작해 주세요.","warning");
+    showToast("먼저 로보킹에게 우리 집을 알려주세요.");
     $("speech").innerHTML="<strong style='color:#ef8c32'>아직 학습 전이에요!</strong><br>먼저 우리 집을 알려주세요.";
     $("modeChip").textContent="🏠 1회차 학습 필요";
     switchPage("homePage");
@@ -1715,11 +1972,11 @@ function predictSocFromConditions(){
   const matchedScenario=findMlScenarioFromChoices(choices);
   const loading=$('predictLoading');
   state.predicting=true;
-  if(loading){loading.textContent="오늘 청소에 필요한 배터리를 계산하고 있어요...";loading.classList.add('active');}
-  $("speech").innerHTML="<strong style='color:#2f8b3a'>잠깐만요!</strong><br>오늘 청소에 필요한 만큼을 계산하고 있어요.";
+  if(loading){loading.textContent="로보킹이 오늘 청소를 준비하고 있어요...";loading.classList.add('active');}
+  $("speech").innerHTML="<strong style='color:#2f8b3a'>잠깐만요!</strong><br>오늘 청소 준비를 하고 있어요.";
   $("modeChip").textContent="🤖 우리 집 기록으로 준비 중";
-  setGuide("오늘 상태를 반영해 필요한 충전량을 계산하고 있어요. 잠시만 기다려 주세요.","charging");
-  showToast("청소 준비 중: 필요한 배터리를 계산하고 있어요.");
+  setGuide("오늘 상태를 보고 로보킹이 청소 준비를 하고 있어요. 잠시만 기다려 주세요.","charging");
+  showToast("청소 준비 중: 오늘 상태에 맞춰 준비하고 있어요.");
 
   setTimeout(()=>{
     syncScenarioToState(matchedScenario);
@@ -1728,16 +1985,16 @@ function predictSocFromConditions(){
     state.chargeComplete=false;
     if(loading){
       const status=state.soc>=state.targetSoc?"바로 청소 가능":"충전 필요";
-      loading.textContent="준비 완료 · 필요한 배터리 "+fmtSoc(state.requiredSoc)+"% · 권장 충전량 "+state.targetSoc+"% · "+status;
+      loading.textContent="준비 완료 · "+status+" · 로보킹이 필요한 만큼 준비했어요.";
       loading.classList.remove('active');
     }
     render();
-    const statusText=state.soc>=state.targetSoc?"바로 청소할 수 있어요":"권장량까지 충전이 필요해요";
-    $("speech").innerHTML="<strong style='color:#2f8b3a'>준비 완료!</strong><br>권장 충전량 "+state.targetSoc+"% · "+statusText;
+    const statusText=state.soc>=state.targetSoc?"바로 청소할 수 있어요":"잠깐 충전하면 청소할 수 있어요";
+    $("speech").innerHTML="<strong style='color:#2f8b3a'>준비 완료!</strong><br>"+statusText;
     $("modeChip").textContent="✅ 청소 준비 완료 · "+state.selectedLabel;
-    addEvent("청소 준비 완료",state.selectedLabel+" · 필요 배터리 "+fmtSoc(state.requiredSoc)+"% · 권장 충전량 "+state.targetSoc+"%.");
-    setGuide(statusText.includes("바로")?"준비 완료! 지금 배터리로 바로 청소할 수 있어요. 아래 <b>청소 미션 수행하기</b> 버튼을 눌러 주세요.":"준비 완료! 지금은 배터리가 조금 부족해요. 아래 버튼으로 <b>권장량 "+state.targetSoc+"%</b>까지만 충전해 주세요.", state.soc>=state.targetSoc?"done":"warning");
-    showToast("청소 준비 완료: 필요 배터리 "+fmtSoc(state.requiredSoc)+"%, 목표 "+state.targetSoc+"%입니다.");
+    addEvent("청소 준비 완료",state.selectedLabel+" 청소를 위해 로보킹이 필요한 만큼 준비했어요.");
+    setGuide(statusText.includes("바로")?"준비 완료! 지금 바로 출동할 수 있어요. 아래 <b>청소 미션 수행하기</b> 버튼을 눌러 주세요.":"준비 완료! 로보킹이 조금만 더 힘을 채우면 좋아요. 아래 버튼으로 충전하고 시작해 주세요.", state.soc>=state.targetSoc?"done":"warning");
+    showToast("청소 준비 완료! 로보킹이 오늘 청소 준비를 마쳤어요.");
   },900);
 }
 
@@ -1776,7 +2033,7 @@ function profileResultBody(){
   const socLine=state.firstRunSocEnough
     ? "배터리 변화: <b>"+Math.round(startSoc)+"% → "+Math.round(endSoc)+"%</b>"
     : "배터리 변화: <b>"+Math.round(startSoc)+"% → "+Math.round(endSoc)+"%</b> <small>(배터리 부족)</small>";
-  return "<b>우리 집 우리 집 저장 완료</b><br><br>"
+  return "<b>우리 집 저장 완료</b><br><br>"
     +"집 크기: <b>"+activeRun.areaPyung+"평 · "+activeRun.home.cleaningAreaM2+"㎡</b><br>"
     +"구역: <b>5개</b><br>"
     +"바닥: <b>"+floorKindCount()+"종 혼합</b><br>"
@@ -1792,11 +2049,11 @@ function startFirstMapping(){
 
   const startSoc=clamp(Math.round(Number(state.soc||0)),0,100);
   if(startSoc < MIN_SOC_AFTER_LEARNING + MIN_LEARNING_SOC_USE){
-    openModal("학습 전 충전이 필요해요","1회차 학습 청소 후에도 최소 <b>"+MIN_SOC_AFTER_LEARNING+"%</b>의 배터리를 남기도록 설정했어요.<br><br>현재 배터리가 <b>"+startSoc+"%</b>라서 먼저 충전한 뒤 학습 청소를 시작하는 것이 안전합니다.");
+    openModal("학습 전에 잠깐 충전할게요","처음 우리 집을 배우려면<br>로보킹에게 힘이 조금 더 필요해요.<br><br>잠깐 충전한 뒤 시작하면<br>집 구조를 더 안정적으로 배울 수 있어요.");
     return;
   }
 
-  // 현재 배터리 기준으로 학습 주행 후 최소 잔량을 남길 수 있는 기록 시나리오를 우선 선택합니다.
+  // 현재 배터리 기준으로 학습 주행 후 여유 배터리를 남길 수 있는 기록 시나리오를 우선 선택합니다.
   const safeRuns=predictionData.runs.filter(r=>getLearningSocUse(r,startSoc)>0);
   activeRun=pickRandomRun(safeRuns.length?safeRuns:predictionData.runs) || predictionData.runs[0];
   syncScenarioToState(activeRun.home);
@@ -1820,8 +2077,8 @@ function startFirstMapping(){
   state.chargeComplete=false;
   state.celebrating=false;
   switchPage("homePage");
-  setGuide("학습 청소를 시작했어요. 집 구조와 구역 정보를 저장하고, 학습 주행 배터리가 함께 줄어듭니다.","charging");
-  showToast("학습 시작: 집 구조와 배터리 사용 기록을 저장합니다.");
+  setGuide("학습 청소를 시작했어요. 로보킹이 우리 집 구조와 바닥 상태를 차근차근 기억하고 있어요.","charging");
+  showToast("학습 시작: 로보킹이 우리 집을 배우고 있어요.");
   render();
 
   let tick=0;
@@ -1849,12 +2106,12 @@ function startFirstMapping(){
       const intensitySelect=$("intensitySelect"); if(intensitySelect)intensitySelect.value='standard';
       const todayStateSelect=$("todayStateSelect"); if(todayStateSelect)todayStateSelect.value='normal';
       state.temperature=29;
-      const eventMsg="시작 배터리 "+Math.round(startSoc)+"% → 현재 배터리 "+Math.round(state.soc)+"% · 학습 소모 "+fmtSoc(learningUse)+"%";
+      const eventMsg="로보킹이 우리 집 구조와 바닥 상태를 기억했어요.";
       addEvent("1회차 학습 청소 완료",eventMsg);
       spawnEffect("🏠",8);spawnEffect("✨",9);
       render();
-      setGuide("우리 집 우리 집 저장 완료! 이제 오늘 청소 조건을 선택하고 <b>오늘 청소 준비하기</b>를 눌러 주세요.","done");
-      showToast("우리 집 저장 완료: 다음은 오늘 청소 준비하기입니다.");
+      setGuide("우리 집 저장 완료! 이제 오늘 청소 조건을 고르면 로보킹이 알아서 준비해요.","done");
+      showToast("우리 집 저장 완료! 이제 오늘 청소를 준비할 수 있어요.");
       setTimeout(()=>{render();},350);
     }
   },260);
@@ -1875,28 +2132,28 @@ function selectScenario(scope,zoneNumber=null){
   render();
   const status=state.soc>=state.targetSoc?"청소 가능":"충전 필요";
   const loading=$('predictLoading');
-  if(loading)loading.textContent=state.selectedLabel+" 선택 · 필요 배터리 "+fmtSoc(state.requiredSoc)+"% · 권장 충전량 "+state.targetSoc+"% · "+status;
-  $("speech").innerHTML="<strong>"+state.selectedLabel+" 선택!</strong><br>권장 충전량 "+state.targetSoc+"%로 업데이트했어요.";
-  $("modeChip").textContent="✨ "+state.selectedLabel+" 권장 충전량 "+state.targetSoc+"%";
-  setGuide((state.soc>=state.targetSoc)?state.selectedLabel+" 준비값을 적용했어요. 현재 배터리로 청소 가능합니다.":state.selectedLabel+" 준비값을 적용했어요. 청소 전 권장량까지 충전해 주세요.", state.soc>=state.targetSoc?"done":"warning");
-  showToast(state.selectedLabel+" 적용: 필요 "+fmtSoc(state.requiredSoc)+"%, 목표 "+state.targetSoc+"%입니다.");
+  if(loading)loading.textContent=state.selectedLabel+" 선택 · "+status+" · 로보킹이 다시 준비했어요.";
+  $("speech").innerHTML="<strong>"+state.selectedLabel+" 선택!</strong><br>이 구역에 맞춰 다시 준비했어요.";
+  $("modeChip").textContent="✨ "+state.selectedLabel+" 청소 준비 완료";
+  setGuide((state.soc>=state.targetSoc)?state.selectedLabel+" 청소 준비가 끝났어요. 지금 바로 출동할 수 있어요.":state.selectedLabel+" 청소 준비가 끝났어요. 잠깐 충전하고 출발하면 좋아요.", state.soc>=state.targetSoc?"done":"warning");
+  showToast(state.selectedLabel+" 청소 준비를 다시 맞췄어요.");
 }
 
 function openScenarioModal(){
   const enough=state.soc>=state.targetSoc;
-  const title=enough?"배가 든든해요!":"아직 배고파요!";
+  const title=enough?"바로 출동할 수 있어요!":"조금만 더 힘을 채울게요!";
   const scopeText=state.selectedScope==="home"?"집 전체 청소":state.selectedLabel+" 청소";
-  const conditionLine="청소 방식 <b>"+state.cleanModeLabel+"</b> · 청소 강도 <b>"+state.intensityLabel+"</b> · 오늘 상태 <b>"+state.todayStateLabel+"</b><br>준비 방식 <b>"+state.matchNote+"</b><br><br>";
+  const conditionLine="오늘 조건: <b>"+state.cleanModeLabel+" · "+state.intensityLabel+" · "+state.todayStateLabel+"</b><br><br>";
   const zoneLine=state.selectedScope==="zone"
-    ? "1회차 학습 결과, "+state.selectedLabel+"의 바닥 타입은 <b>"+(state.floorType||"정보 없음")+"</b>입니다.<br>오염도는 <b>"+(state.dirtLevel||"정보 없음")+"</b>, 흡입 모드는 <b>"+(state.suctionMode||"자동")+"</b>로 기록됐어요.<br><br>"
-    : "1회차 학습으로 저장한 5개 구역 기록을 모두 합산해서 준비했어요.<br><br>";
+    ? state.selectedLabel+"은 <b>"+(state.floorType||"바닥 정보")+"</b> 바닥이고, 오늘은 <b>"+(state.dirtLevel||"평소")+"</b> 상태로 준비했어요.<br><br>"
+    : "저장해둔 우리 집 정보를 바탕으로 집 전체 청소를 준비했어요.<br><br>";
   const body=enough
-    ? scopeText+"를 선택했어요.<br><br>"+conditionLine+zoneLine+"이번 청소에는 배터리가 <b>"+fmtSoc(state.requiredSoc)+"%</b>이고, 권장 충전량은 <b>"+state.targetSoc+"%</b>예요.<br>지금 배터리가 <b>"+state.soc+"%</b>라서 바로 청소를 시작할 수 있어요!"
-    : scopeText+"를 선택했어요.<br><br>"+conditionLine+zoneLine+"이번 청소에는 배터리가 <b>"+fmtSoc(state.requiredSoc)+"%</b>예요.<br>여유 배터리 15%를 더해서 권장 충전량은 <b>"+state.targetSoc+"%</b>입니다.<br><br><b>권장량까지만 충전하고 청소를 시작할게요.</b> 과충전은 줄이고 배터리는 오래 지켜볼게요!";
+    ? scopeText+" 준비가 끝났어요.<br><br>"+conditionLine+zoneLine+"지금 바로 시작해도 충분해요.<br>제가 배터리를 아끼면서 청소할게요!"
+    : scopeText+" 준비가 끝났어요.<br><br>"+conditionLine+zoneLine+"지금 바로 출발하기엔 힘이 조금 부족해요.<br><br><b>잠깐 충전하고 나면</b><br>더 편하게 청소를 마칠 수 있어요.";
   if(enough){
     openModal(title,body);
   }else{
-    openModal(title,body,{showCancel:true,cancelText:"취소",confirmText:"충전하기",onConfirm:()=>chargeRobot(false)});
+    openModal(title,body,{showCancel:true,cancelText:"취소",confirmText:"충전하고 시작",onConfirm:()=>chargeRobot(false)});
   }
 }
 
@@ -1986,11 +2243,11 @@ function renderPlan(){
     }else if(!state.profileReady){
       startCleanPrimary.innerHTML='🏠 1회차 학습 청소가 먼저예요<small id="startCleanHint">집 구조를 저장한 뒤 청소할 수 있어요</small>';
     }else if(!state.predicted){
-      startCleanPrimary.innerHTML='🤖 오늘 청소 준비가 먼저예요<small id="startCleanHint">필요한 배터리를 계산한 뒤 시작해요</small>';
+      startCleanPrimary.innerHTML='🤖 오늘 청소 준비가 먼저예요<small id="startCleanHint">로보킹이 필요한 만큼 알아서 준비해요</small>';
     }else if(state.soc<state.targetSoc){
-      startCleanPrimary.innerHTML='🔋 필요한 만큼 충전하고 청소하기<small id="startCleanHint">현재 '+state.soc+'% · 권장 '+state.targetSoc+'%</small>';
+      startCleanPrimary.innerHTML='🔋 충전하고 청소하기<small id="startCleanHint">필요한 만큼만 채우고 출발해요</small>'; 
     }else{
-      startCleanPrimary.innerHTML='🧹 청소 미션 수행하기<small id="startCleanHint">'+state.selectedLabel+' · 필요 배터리 '+fmtSoc(state.requiredSoc)+'%</small>';
+      startCleanPrimary.innerHTML='🧹 청소 미션 수행하기<small id="startCleanHint">'+state.selectedLabel+' · 바로 출동 가능</small>'; 
     }
   }
 
@@ -2017,10 +2274,10 @@ function renderPlan(){
     +"<div class='summary-title'>"+scopeText+"</div>"
     +"<div class='summary-row'><span class='summary-key'>조건</span><span class='summary-val'>"+conditionDetail+"</span></div>"
     +"<div class='summary-row'><span class='summary-key'>프로필</span><span class='summary-val'>"+detail+"</span></div>"
-    +"<div class='summary-row'><span class='summary-key'>필요 배터리</span><span class='summary-val em'>"+fmtSoc(state.requiredSoc)+"%</span></div>"
+    +"<div class='summary-row'><span class='summary-key'>청소 준비</span><span class='summary-val em'>완료</span></div>"
     +"<div class='summary-row'><span class='summary-key'>준비 방식</span><span class='summary-val green'>"+state.matchNote+"</span></div>"
     +"</div>";
-  $('planSocSub').textContent="필요 "+fmtSoc(state.requiredSoc)+"% · 여유까지 반영";
+  $('planSocSub').textContent="필요한 만큼만 충전";
 }
 
 function renderHome(){
@@ -2029,9 +2286,9 @@ function renderHome(){
   if(state.chargeComplete){
     room.classList.add("celebrate");
     $("speech").innerHTML="<strong>배불러요!</strong><br>이제 청소 가능해요!";
-    $("modeChip").textContent="💖 맞춤 충전 완료 · 배터리 "+state.soc+"%";
+    $("modeChip").textContent="💖 충전 완료 · 출동 준비";
     $("batteryFace").textContent="😍";$("spark").textContent="💖";
-    $("batteryMessage").innerHTML="권장량까지 채웠어요.<br>과충전 없이 준비 완료!";
+    $("batteryMessage").innerHTML="필요한 만큼 채웠어요.<br>출동 준비 완료!";
     $("timeTip").textContent=state.selectedLabel+" 청소를 시작할 수 있어요.";
   }else if(state.celebrating){
     room.classList.add("celebrate");
@@ -2047,7 +2304,7 @@ function renderHome(){
     $("batteryMessage").innerHTML="학습 청소 중입니다.<br>배터리가 실제로 소모돼요.";
     $("timeTip").textContent="학습 진행 "+state.mappingProgress+"% · 현재 배터리 "+Math.round(state.soc)+"%";
   }else if(state.predicting){
-    $("speech").innerHTML="<strong style='color:#2f8b3a'>분석 중이에요!</strong><br>저장된 기록으로 배터리를 계산하고 있어요.";
+    $("speech").innerHTML="<strong style='color:#2f8b3a'>준비 중이에요!</strong><br>오늘 상태에 맞춰 준비하고 있어요.";
     $("modeChip").textContent="🤖 우리 집 기록으로 준비 중";
     $("batteryFace").textContent="🤔";$("spark").textContent="✨";
   }else if(!state.profileReady){
@@ -2057,8 +2314,8 @@ function renderHome(){
     $("batteryMessage").innerHTML="아직 우리 집 정보를 몰라요.<br>학습 청소가 필요합니다.";
     $("timeTip").textContent="1회차 학습 후 청소 준비 가능";
   }else if(!state.predicted){
-    $("speech").innerHTML="<strong>집을 배웠어요!</strong><br>이제 필요한 배터리를 준비할게요.";
-    $("modeChip").textContent="✅ 우리 집 우리 집 저장 완료";
+    $("speech").innerHTML="<strong>집을 배웠어요!</strong><br>이제 청소 준비를 맡겨주세요.";
+    $("modeChip").textContent="✅ 우리 집 저장 완료";
     $("batteryFace").textContent="😊";$("spark").textContent="✨";
     $("batteryMessage").innerHTML="집 구조 학습 완료!<br>오늘 청소 준비하기를 눌러주세요.";
     $("timeTip").textContent="청소 준비 대기 중";
@@ -2072,11 +2329,11 @@ function renderHome(){
     $("spark").textContent="💨";
   }else if(state.charging){
     room.classList.add("charging");
-    $("speech").innerHTML="<strong style='color:#e48627'>잠깐 쉬는 중이에요</strong><br>권장량까지만 충전할게요.";
-    $("modeChip").textContent="⚡ "+state.selectedLabel+" 맞춤 충전 · "+state.soc+" → "+state.targetSoc+"%";
+    $("speech").innerHTML="<strong style='color:#e48627'>잠깐 쉬는 중이에요</strong><br>필요한 만큼만 충전할게요.";
+    $("modeChip").textContent="⚡ "+state.selectedLabel+" 출동 준비 중";
     $("batteryFace").textContent="😌";
     $("batteryMessage").innerHTML="충전 스테이션에서 쉬면서<br>필요한 만큼만 채우고 있어요.";
-    $("timeTip").textContent="현재 배터리 "+state.soc+"% · 권장 "+state.targetSoc+"%";
+    $("timeTip").textContent="로보킹이 필요한 만큼만 채우고 있어요.";
     $("spark").textContent="⚡";
   }else if(state.soc<15){
     room.classList.add("low");
@@ -2087,19 +2344,19 @@ function renderHome(){
     $("timeTip").textContent="충전 후 청소를 시작해 주세요.";
     $("spark").textContent="💦";
   }else{
-    $("modeChip").textContent="✨ 권장 충전량 "+state.targetSoc+"%";
+    $("modeChip").textContent="✨ 로보킹 맞춤 준비";
     $("batteryFace").textContent=state.soc>90?"😮":"😊";
     $("spark").textContent="✨";
 
     if(state.soc < state.targetSoc){
       $("speech").innerHTML=
         "<strong style='color:#ef8c32'>아직 배고파요!</strong><br>"
-        + "권장 충전량 "+state.targetSoc+"%까지만<br>충전하고 청소할게요.";
-      $("batteryMessage").innerHTML=state.selectedLabel+" 청소에는<br>약 "+fmtSoc(state.requiredSoc)+"% 배터리가 필요해요.";
-      $("timeTip").textContent="현재 배터리 "+state.soc+"% → 권장 충전량 "+state.targetSoc+"%까지 충전 필요";
+        + "필요한 만큼만<br>충전하고 청소할게요.";
+      $("batteryMessage").innerHTML=state.selectedLabel+" 청소를 위해<br>조금 더 충전이 필요해요.";
+      $("timeTip").textContent="잠깐 충전하면 청소를 시작할 수 있어요.";
     }else{
       $("speech").innerHTML="<strong>배가 든든해요!</strong><br>"+state.selectedLabel+" 청소를 준비할게요!";
-      $("batteryMessage").innerHTML="현재 배터리로 충분해요.<br>권장 충전량 "+state.targetSoc+"% 이상입니다.";
+      $("batteryMessage").innerHTML="현재 배터리로 충분해요.<br>바로 출동할 수 있어요.";
       $("timeTip").textContent="현재 배터리로 "+state.selectedLabel+" 청소가 가능합니다.";
     }
   }
@@ -2119,9 +2376,9 @@ function renderBattery(){
   if(!state.profileReady){
     $("insightText").innerHTML="아직 1회차 학습 청소 전입니다. 집 구조와 구역 정보를 먼저 저장하면 오늘 청소 준비를 시작할 수 있습니다.";
   }else if(!state.predicted){
-    $("insightText").innerHTML="우리 집 정보가 저장되었습니다. 오늘 청소 준비하기를 누르면 1회차 청소 기록을 기준으로 다음 청소 권장 충전량을 계산합니다.";
+    $("insightText").innerHTML="우리 집 정보가 저장됐어요. 오늘 청소 준비하기를 누르면 로보킹이 오늘 상태에 맞춰 필요한 만큼만 준비합니다.";
   }else{
-    $("insightText").innerHTML="<b>"+state.selectedLabel+"</b> · "+state.cleanModeLabel+" · "+state.intensityLabel+" · "+state.todayStateLabel+"<br>필요 배터리: <b>"+fmtSoc(state.requiredSoc)+"%</b> · 권장 충전량: <b>"+state.targetSoc+"%</b><br><b>"+state.matchNote+"</b> 기준이에요.";
+    $("insightText").innerHTML="<b>"+state.selectedLabel+"</b> · "+state.cleanModeLabel+" · "+state.intensityLabel+" · "+state.todayStateLabel+"<br>로보킹이 오늘 청소 준비를 마쳤어요.<br>필요하면 잠깐 충전하고 바로 출발할 수 있어요.";
   }
 
   const y=132-(state.targetSoc-15)/75*104;
@@ -2139,11 +2396,132 @@ function renderRecord(){
   $("sunBar").style.height=Math.min(96,56+state.cleanCount*10)+"%";
 }
 
+function renderAccessories(){
+  const robot=$("robot");
+  const head=$("robotHeadDeco");
+  const aura=$("robotAuraDeco");
+  const decal=$("robotBodyDeco");
+  if(!robot || !head || !aura)return;
+
+  robot.classList.toggle("has-custom-head",state.equippedItems.head && state.equippedItems.head!=="crown");
+
+  const headItem=state.equippedItems.head;
+  head.className="robot-accessory robot-head-deco";
+  head.innerHTML="";
+  if(headItem && headItem!=="crown"){
+    if(headItem==="bunny"){
+      head.classList.add("show","ears","bunny");
+      head.innerHTML='<span class="robo-ear left"></span><span class="robo-ear right"></span>';
+    }else if(headItem==="cat"){
+      head.classList.add("show","ears","cat");
+      head.innerHTML='<span class="robo-ear left"></span><span class="robo-ear right"></span>';
+    }else{
+      const headMap={ribbon:"🎀",hat:"🧢"};
+      head.textContent=headMap[headItem]||"";
+      head.classList.add("show",headItem);
+    }
+  }
+
+  aura.className="robot-aura-deco";
+  if(state.equippedItems.aura==="sparkle"){
+    aura.innerHTML="<span>✨</span><span>✨</span><span>✨</span><span>✨</span>";
+    aura.classList.add("show");
+  }else{
+    aura.innerHTML="";
+  }
+
+  // 이전 버전 호환용: 더 이상 몸통 스티커를 사용하지 않으므로 화면에서 숨깁니다.
+  if(decal){
+    decal.className="robot-accessory robot-body-deco";
+    decal.textContent="";
+  }
+}
+
 function renderReward(){
   $("levelText").textContent=state.level;
   $("expText").textContent=state.exp;
   $("expFill").style.width=state.exp+"%";
+
+  const preview=$("levelRobotPreview");
+  if(preview){
+    const head=state.equippedItems.head;
+    let html='<span class="preview-base">🤖</span>';
+    if(head && head!=="crown"){
+      if(head==="bunny" || head==="cat"){
+        html+='<span class="preview-head ears '+head+'"><span class="p-ear left"></span><span class="p-ear right"></span></span>';
+      }else{
+        const headMap={ribbon:"🎀",hat:"🧢"};
+        html+='<span class="preview-head '+head+'">'+(headMap[head]||'')+'</span>';
+      }
+    }
+    if(state.equippedItems.aura==="sparkle")html+='<span class="preview-aura"><span class="a1">✨</span><span class="a2">✨</span><span class="a3">✨</span></span>';
+    preview.innerHTML=html;
+  }
+
+  const itemTab=$("rewardTabItems");
+  const couponTab=$("rewardTabCoupons");
+  const itemPanel=$("rewardItemsPanel");
+  const couponPanel=$("rewardCouponsPanel");
+  if(itemTab)itemTab.classList.toggle("active",state.rewardTab==="items");
+  if(couponTab)couponTab.classList.toggle("active",state.rewardTab==="coupons");
+  if(itemPanel)itemPanel.classList.toggle("hidden",state.rewardTab!=="items");
+  if(couponPanel)couponPanel.classList.toggle("hidden",state.rewardTab!=="coupons");
+
+  updateRewardButton("ribbon","Ribbon");
+  updateRewardButton("hat","Hat");
+  updateRewardButton("bunny","Bunny");
+  updateRewardButton("cat","Cat");
+  updateRewardButton("sparkle","Sparkle");
+  updateCouponButton("lg5","CouponLg5");
+  updateCouponButton("cleanKit","CouponCleanKit");
+  updateCouponButton("batteryCare","CouponBatteryCare");
+  updateCouponButton("moveIn","CouponMoveIn");
+
+  const foodBtn=$("btnFood");
+  const foodStatus=$("statusFood");
+  if(foodBtn){
+    foodBtn.textContent=state.coins>=50?"50 코인":"50 코인 필요";
+    foodBtn.classList.toggle("need-coins",state.coins<50);
+  }
+  if(foodStatus)foodStatus.textContent="보유 간식 "+state.food+"개";
 }
+
+function updateRewardButton(key,suffix){
+  const item=shopItems[key];
+  const btn=$("btn"+suffix);
+  const card=$("card"+suffix);
+  const status=$("status"+suffix);
+  if(!item || !btn)return;
+  const owned=Boolean(state.ownedItems[key]);
+  const equipped=state.equippedItems[item.slot]===item.value;
+  btn.classList.remove("owned","equipped","need-coins");
+  if(card){card.classList.toggle("owned",owned);card.classList.toggle("equipped",equipped);}
+  if(status)status.textContent=equipped?"장착 중":(owned?"보유 중":"");
+  if(equipped){btn.textContent="해제하기";btn.classList.add("equipped");}
+  else if(owned){btn.textContent="장착하기";btn.classList.add("owned");}
+  else{
+    btn.textContent=state.coins<item.cost ? item.cost+" 코인 필요" : item.cost+" 코인";
+    if(state.coins<item.cost)btn.classList.add("need-coins");
+  }
+}
+
+function updateCouponButton(key,suffix){
+  const item=couponItems[key];
+  const btn=$("btn"+suffix);
+  const card=$("card"+suffix);
+  const status=$("status"+suffix);
+  if(!item || !btn)return;
+  const count=Number(state.ownedCoupons[key]||0);
+  btn.classList.remove("owned","equipped","need-coins");
+  if(card)card.classList.toggle("owned",count>0);
+  if(status)status.textContent=count>0?"보유 쿠폰 "+count+"장":"";
+  if(state.coins<item.cost){
+    btn.textContent=item.cost+" 코인 필요";
+    btn.classList.add("need-coins");
+  }
+  else{btn.textContent=item.cost+" 코인으로 교환";}
+}
+
 
 function showToast(message){
   const toast=$("toast");toast.textContent=message;toast.classList.add("show");
@@ -2187,14 +2565,24 @@ function feedRobot(){if(state.food<=0){showToast("음식이 부족해요. 리워
 function playRobot(){if(state.soc<5){showToast("배터리가 부족해서 놀 수 없어요.");return}state.soc-=3;state.exp+=5;pulseRobot();spawnEffect("💖",8);levelCheck();render();showToast("로보킹의 친밀도와 경험치가 올랐어요.")}
 function trainRobot(){if(state.soc<8){showToast("훈련 전에 충전이 필요해요.");return}state.soc-=6;state.health=Math.min(100,state.health+3);state.exp+=12;pulseRobot();spawnEffect("✨",8);levelCheck();render();showToast("로보킹이 훈련을 완료했습니다.")}
 function takePhoto(){pulseRobot();spawnEffect("📸",5);openModal("오늘의 사진","왕관을 쓴 로보킹의 사진을 촬영했습니다.<br><br>향후 장식 아이템과 청소 완료 장면을 사진첩에 저장할 수 있습니다.")}
-function decorateRobot(){spawnEffect("🎀",9);openModal("로보킹 꾸미기","현재 장착 아이템은 <b>황금 왕관</b>입니다.<br><br>리본, 탐험가 모자, 표정 스킨 등을 리워드 화면에서 확인할 수 있습니다.")}
+function decorateRobot(){
+  switchPage("rewardPage");
+  showToast("리워드에서 아이템을 사면 로보킹에게 계속 장착돼요.");
+}
 
 function showStatus(){
-  if(!state.profileReady){openModal("우리 집 학습 전","아직 1회차 학습 청소가 실행되지 않았어요.<br><br>로보킹이 집 구조, 구역별 면적, 바닥 타입, 오염도, 장애물 수준, 배터리 사용 기록을 저장하면 청소 준비을 시작할 수 있습니다.");return}
-  if(!state.predicted){openModal("우리 집 정보","1회차 학습 청소 기록이 저장됐어요.<br><br>"+profileResultBody()+"<br><br>다음 단계로 오늘 청소 준비하기를 눌러주세요.");return}
-  const scopeText=state.selectedScope==="home"?"집 전체 청소":state.selectedLabel+" 청소";
-  const zoneInfo=state.selectedScope==="zone"?"<br>바닥 타입 <b>"+(state.floorType||"정보 없음")+"</b><br>오염도 <b>"+(state.dirtLevel||"정보 없음")+"</b>":"";
-  openModal("청소 준비 결과","저장된 프로필 <b>"+state.areaPyung+"평</b><br>선택 범위 <b>"+scopeText+"</b>"+zoneInfo+"<br>청소 방식 <b>"+state.cleanModeLabel+"</b><br>청소 강도 <b>"+state.intensityLabel+"</b><br>오늘 상태 <b>"+state.todayStateLabel+"</b><br>로보킹이 우리 집 기록을 바탕으로 계산했어요.<br>현재 배터리 <b>"+state.soc+"%</b><br>필요 배터리 <b>"+fmtSoc(state.requiredSoc)+"%</b><br>권장량 <b>"+state.targetSoc+"%</b><br><br>로보킹이 우리 집 기록을 바탕으로 계산했어요");
+  if(!state.profileReady){
+    openModal("먼저 우리 집을 배울게요","아직 로보킹이 우리 집을 잘 몰라요.<br><br>1회차 학습 청소를 시작하면 방 구조와 바닥 상태를 기억하고, 다음부터 더 똑똑하게 청소를 준비할 수 있어요.");
+    return;
+  }
+  if(!state.predicted){
+    openModal("우리 집을 기억했어요","1회차 학습 청소가 끝났어요.<br><br>이제 오늘 청소 조건을 고르고 <b>오늘 청소 준비하기</b>를 눌러 주세요.<br>로보킹이 알아서 필요한 만큼 준비할게요.");
+    return;
+  }
+  const scopeText=state.selectedScope==="home"?"집 전체":state.selectedLabel;
+  const zoneInfo=state.selectedScope==="zone"?"<br>바닥: <b>"+(state.floorType||"정보 없음")+"</b><br>상태: <b>"+(state.dirtLevel||"평소")+"</b>":"";
+  const readyText=state.soc>=state.targetSoc?"지금 바로 출동할 수 있어요.":"잠깐만 충전하면 출동할 수 있어요.";
+  openModal("오늘 청소 준비 완료",scopeText+" 청소를 준비했어요."+zoneInfo+"<br><br>오늘 조건: <b>"+state.cleanModeLabel+" · "+state.intensityLabel+" · "+state.todayStateLabel+"</b><br><br>"+readyText+"<br>로보킹이 배터리를 아끼면서 청소할게요.");
 }
 
 function getRemainingCleaningSoc(){
@@ -2240,16 +2628,13 @@ function showSplitCleaningModal(){
 function showReserveChargeModal(autoStartAfterCharge=false){
   const remaining=getRemainingCleaningSoc();
   const needed=targetFromRequired(remaining);
-  const endIfStartNow=expectedEndSoc(state.soc,remaining);
   state.targetSoc=needed;
   render();
-  const body=state.selectedLabel+" 지금 바로 시작하면 청소 후 배터리가 <b>"+fmtSoc(endIfStartNow)+"%</b>가 될 수 있어요.<br><br>"
-    +"배터리를 오래 쓰기 위해 청소 후 최소 <b>"+MIN_RESERVE_SOC+"%</b>는 남겨야 합니다.<br>"
-    +"필요 배터리 <b>"+fmtSoc(remaining)+"%</b> + 최소 잔량 <b>"+MIN_RESERVE_SOC+"%</b> 기준으로 <b>"+needed+"%</b>까지 충전 후 시작할게요.";
-  openModal("충전이 먼저 필요해요",body,{
+  const body=state.selectedLabel+" 청소를 바로 시작하기엔<br>로보킹의 힘이 조금 부족해요.<br><br>잠깐 충전하고 나면<br>청소를 더 편하게 마칠 수 있어요.<br><br>필요한 만큼만 채우고 바로 출발할게요!";
+  openModal("먼저 힘을 채울게요",body,{
     showCancel:true,
     cancelText:"취소",
-    confirmText:"충전하기",
+    confirmText:"충전하고 시작",
     onConfirm:()=>{
       closeModal();
       switchPage("homePage");
@@ -2262,17 +2647,13 @@ function showChargeChoiceModal(autoStartAfterCharge=false){
   const remaining=getRemainingCleaningSoc();
   const needed=targetFromRequired(remaining);
   state.targetSoc=needed;
-  const endAfterCharge=expectedEndSoc(needed,remaining);
-  const body=state.selectedLabel+" 청소를 선택했어요.<br><br>"
-    +(state.selectedScope==="zone"?state.selectedLabel+"의 바닥 타입은 <b>"+(state.floorType||"정보 없음")+"</b>입니다.<br>오염도는 <b>"+(state.dirtLevel||"정보 없음")+"</b>, 흡입 모드는 <b>"+(state.suctionMode||"자동")+"</b>예요.<br><br>":"")
-    +"이번 청소에는 배터리가 <b>"+fmtSoc(remaining)+"%</b>입니다.<br>"
-    +"청소 후 최소 <b>"+MIN_RESERVE_SOC+"%</b>를 남기기 위해 권장 충전량은 <b>"+needed+"%</b>예요.<br>"
-    +"이만큼 채우고 시작하면 청소 후 배터리는 약 <b>"+fmtSoc(endAfterCharge)+"%</b>입니다.<br><br>"
-    +"권장량까지만 충전할까요?";
-  openModal("아직 배고파요!",body,{
+  render();
+  const scopeText=state.selectedScope==="zone"?state.selectedLabel+"은 <b>"+(state.floorType||"바닥 정보")+"</b> 바닥이라 조금 더 힘이 필요해요.<br><br>":"";
+  const body=scopeText+"이번 청소를 끝까지 편하게 마치려면<br>로보킹이 힘을 조금 더 채우면 좋아요.<br><br>필요한 만큼만 충전하고<br>바로 청소를 시작할게요.";
+  openModal("아직 배가 조금 고파요!",body,{
     showCancel:true,
     cancelText:"취소",
-    confirmText:"충전하기",
+    confirmText:"충전하고 시작",
     onConfirm:()=>{
       closeModal();
       switchPage("homePage");
@@ -2286,15 +2667,15 @@ function startCleaning(){
   if(state.charging){showToast("충전이 끝난 후 청소할게요.");return}
   if(state.mapping){showToast("1회차 학습이 끝난 뒤 청소할 수 있어요.");return}
   if(!state.profileReady){
-    setGuide("아직 집 정보이 없어요. 먼저 1회차 학습 청소를 실행해 주세요.","warning");
-    showToast("먼저 1회차 학습 청소가 필요합니다.");
+    setGuide("아직 로보킹이 우리 집을 잘 몰라요. 먼저 1회차 학습 청소를 시작해 주세요.","warning");
+    showToast("먼저 로보킹에게 우리 집을 알려주세요.");
     $("speech").innerHTML="<strong style='color:#ef8c32'>학습이 먼저예요</strong><br>집 정보를 저장한 뒤 청소할 수 있어요.";
     switchPage("homePage");
     return;
   }
   if(!state.predicted){
     showToast("청소 전 오늘 청소 준비하기를 먼저 눌러주세요.");
-    $("speech").innerHTML="<strong style='color:#2f8b3a'>오늘 청소 준비가 필요해요</strong><br>필요한 배터리를 먼저 계산할게요.";
+    $("speech").innerHTML="<strong style='color:#2f8b3a'>청소 준비가 필요해요</strong><br>오늘 상태를 먼저 알려주세요.";
     switchPage("homePage");
     return;
   }
@@ -2353,8 +2734,8 @@ function startCleaning(){
   const endSoc=Math.max(MIN_RESERVE_SOC,Math.round((startSoc-segmentUse)*10)/10);
   state.cleaningSegmentIndex+=1;
   render();
-  setGuide(state.selectedLabel+" 청소를 시작했어요. 종료 후 최소 <b>"+MIN_RESERVE_SOC+"%</b>가 남도록 관리합니다.","normal");
-  showToast("청소 시작: 종료 후 최소 "+MIN_RESERVE_SOC+"%는 남깁니다.");
+  setGuide(state.selectedLabel+" 청소를 시작했어요. 로보킹이 배터리를 아끼면서 깨끗하게 청소할게요.","normal");
+  showToast("청소 시작! 로보킹이 배터리를 아끼며 청소해요.");
 
   let step=0;
   const totalSteps=20;
@@ -2405,13 +2786,13 @@ function startCleaning(){
       state.area=Math.round((state.area||0)+(state.cleaningAreaM2||0));
       state.average=Math.round((state.average+Math.max(15,Math.round(state.requiredSoc*1.4)))/2);
       levelCheck();
-      addEvent(state.selectedLabel+" 청소 완료","필요 배터리 "+fmtSoc(state.requiredSoc)+"%와 최소 잔량 "+MIN_RESERVE_SOC+"% 기준을 지키며 청소를 완료했습니다.");
+      addEvent(state.selectedLabel+" 청소 완료","로보킹이 배터리를 아끼며 청소를 마쳤어요.");
       spawnEffect("🎉",15);spawnEffect("⭐",9);
       render();
       $("speech").innerHTML="<strong style='color:#2f8b3a'>청소 완료!</strong><br>+50코인을 받았어요.";
-      $("modeChip").textContent="🏆 "+state.selectedLabel+" 완료 · 종료 배터리 "+fmtSoc(state.soc)+"%";
-      setGuide("청소 완료! 종료 배터리는 <b>"+fmtSoc(state.soc)+"%</b>이고, 보상 +50코인이 지급됐어요.","done");
-      showToast("청소 완료: 종료 배터리 "+fmtSoc(state.soc)+"%, +50코인 획득!");
+      $("modeChip").textContent="🏆 "+state.selectedLabel+" 완료 · +50코인";
+      setGuide("청소 완료! 로보킹이 무리하지 않고 잘 마쳤어요. 보상으로 +50코인을 받았어요.","done");
+      showToast("청소 완료! 로보킹이 +50코인을 가져왔어요.");
       setTimeout(()=>{state.celebrating=false;render()},2200);
     }
   },320);
@@ -2425,9 +2806,9 @@ function chargeRobot(autoStart=false){
     state.chargeComplete=true;
     render();
     $("speech").innerHTML="<strong>배불러요!</strong><br>이제 "+state.selectedLabel+" 청소가 가능해요.";
-    $("modeChip").textContent="💖 권장량 도달 · "+state.soc+"%";
-    setGuide("이미 권장량에 도달했어요. 바로 청소를 시작할 수 있습니다.","done");
-    showToast("이미 권장 충전량입니다. 바로 청소할 수 있어요.");
+    $("modeChip").textContent="💖 출동 준비 완료";
+    setGuide("이미 충분히 준비됐어요. 바로 청소를 시작할 수 있어요.","done");
+    showToast("이미 충분히 준비됐어요. 바로 출동할 수 있어요.");
     setTimeout(()=>{state.chargeComplete=false;render()},2600);
     return;
   }
@@ -2436,8 +2817,8 @@ function chargeRobot(autoStart=false){
   state.charging=true;
   state.chargeComplete=false;
   render();
-  setGuide("맞춤 충전을 시작했어요. 권장량 <b>"+state.targetSoc+"%</b>까지만 충전하고 자동으로 멈춥니다.","charging");
-  showToast("맞춤 충전 시작: 권장량 "+state.targetSoc+"%까지만 채웁니다.");
+  setGuide("맞춤 충전을 시작했어요. 로보킹이 필요한 만큼만 채우고 알아서 멈춰요.","charging");
+  showToast("맞춤 충전 시작! 필요한 만큼만 채울게요.");
   const timer=setInterval(()=>{
     state.soc=Math.min(state.targetSoc,state.soc+2);
     state.temperature=Math.min(32,state.temperature+.1);
@@ -2449,31 +2830,128 @@ function chargeRobot(autoStart=false){
       state.temperature=29;
       state.acceptCount+=1;
       state.chargeComplete=true;
-      addEvent("맞춤 충전 완료",state.selectedLabel+" 권장 충전량 "+state.targetSoc+"%에서 자동 충전을 종료했습니다.");
+      addEvent("맞춤 충전 완료",state.selectedLabel+" 청소에 필요한 만큼만 채우고 멈췄어요.");
       spawnEffect("💖",12);
       spawnEffect("✨",8);
       render();
-      $("speech").innerHTML="<strong>배불러요!</strong><br>권장 충전량 "+state.targetSoc+"%까지 채웠어요.";
-      $("modeChip").textContent="💖 맞춤 충전 완료 · 배터리 "+state.soc+"%";
-      setGuide("맞춤 충전 완료! 이제 아래 <b>청소 미션 수행하기</b> 버튼으로 청소를 시작할 수 있어요.","done");
-      showToast("충전 완료: 권장량 "+state.targetSoc+"% 도달, 청소 가능!");
+      $("speech").innerHTML="<strong>배불러요!</strong><br>출동할 준비가 됐어요!";
+      $("modeChip").textContent="💖 충전 완료 · 출동 준비";
+      setGuide("충전 완료! 이제 아래 <b>청소 미션 수행하기</b> 버튼으로 출동할 수 있어요.","done");
+      showToast("충전 완료! 이제 로보킹이 출동할 수 있어요.");
       setTimeout(()=>{state.chargeComplete=false;render()},3200);
       if(autoStart){setTimeout(startCleaning,1000)}
     }
   },150);
 }
-function buyFood(){if(state.coins<50){showToast("코인이 부족해요.");return}state.coins-=50;state.food+=1;render();showToast("에너지 간식 1개를 구매했습니다.")}
+function buyFood(){
+  if(state.coins<50){showToast("코인이 조금 부족해요. 청소 미션으로 코인을 모아보세요.");return}
+  state.coins-=50;
+  state.food+=1;
+  render();
+  showToast("냠냠! 에너지 간식 1개를 챙겼어요. 필요할 때 먹여주세요.");
+}
+function handleRewardItem(key){
+  const item=shopItems[key];
+  if(!item)return;
+  if(!state.ownedItems[key]){
+    if(state.coins<item.cost){
+      showToast(item.name+"을(를) 데려오려면 코인이 조금 더 필요해요.");
+      return;
+    }
+    state.coins-=item.cost;
+    state.ownedItems[key]=true;
+    state.equippedItems[item.slot]=item.value;
+    saveCloset();
+    switchPage("homePage");
+    setTimeout(()=>{spawnEffect(item.icon,10);showToast(item.message);render();},250);
+    render();
+    return;
+  }
+  const isEquipped=state.equippedItems[item.slot]===item.value;
+  if(isEquipped){
+    state.equippedItems[item.slot]=(item.slot==="head"?"crown":null);
+    saveCloset();
+    render();
+    showToast(item.name+"을(를) 잠시 벗겨뒀어요.");
+  }else{
+    state.equippedItems[item.slot]=item.value;
+    saveCloset();
+    switchPage("homePage");
+    setTimeout(()=>{spawnEffect(item.icon,8);showToast(item.message);render();},250);
+    render();
+  }
+}
+
+function switchRewardTab(tab){
+  state.rewardTab=tab;
+  render();
+}
+function handleCoupon(key){
+  const item=couponItems[key];
+  if(!item)return;
+  if(state.coins<item.cost){
+    const need=Math.max(0,item.cost-state.coins);
+    showToast(item.name+" 교환까지 "+need+"코인 더 필요해요.");
+    return;
+  }
+  state.coins-=item.cost;
+  state.ownedCoupons[key]=Number(state.ownedCoupons[key]||0)+1;
+  saveCoupons();
+  render();
+  showToast(item.message+" 혜택: "+item.benefit);
+}
+
 
 const actions={
   startFirstMapping:startFirstMapping,
   predictSoc:predictSocFromConditions,
   selectHome:()=>selectScenario("home"),selectZone1:()=>selectScenario("zone",1),selectZone2:()=>selectScenario("zone",2),selectZone3:()=>selectScenario("zone",3),selectZone4:()=>selectScenario("zone",4),selectZone5:()=>selectScenario("zone",5),
   pet:petRobot,feed:feedRobot,play:playRobot,train:trainRobot,photo:takePhoto,clean:startCleaning,charge:chargeRobot,status:showStatus,
-  record:()=>switchPage("recordPage"),decorate:decorateRobot,shop:()=>switchPage("rewardPage"),chargeFromBattery:()=>{switchPage("homePage");setTimeout(chargeRobot,220)},buyFood:buyFood,
-  ribbon:()=>{switchPage("homePage");setTimeout(()=>spawnEffect("🎀",10),220)},sparkle:()=>{switchPage("homePage");setTimeout(()=>spawnEffect("✨",10),220)},hat:()=>showToast("탐험가 모자는 120코인이 필요해요.")
+  record:()=>switchPage("recordPage"),event:()=>switchPage("eventPage"),decorate:decorateRobot,shop:()=>switchPage("rewardPage"),chargeFromBattery:()=>{switchPage("homePage");setTimeout(chargeRobot,220)},buyFood:buyFood,
+  itemRibbon:()=>handleRewardItem("ribbon"),itemHat:()=>handleRewardItem("hat"),itemBunny:()=>handleRewardItem("bunny"),itemCat:()=>handleRewardItem("cat"),itemSparkle:()=>handleRewardItem("sparkle"),
+  rewardTabItems:()=>switchRewardTab("items"),rewardTabCoupons:()=>switchRewardTab("coupons"),
+  couponLg5:()=>handleCoupon("lg5"),couponCleanKit:()=>handleCoupon("cleanKit"),couponBatteryCare:()=>handleCoupon("batteryCare"),couponMoveIn:()=>handleCoupon("moveIn"),
+  ribbon:()=>handleRewardItem("ribbon"),sparkle:()=>handleRewardItem("sparkle"),hat:()=>handleRewardItem("hat")
 };
 
 document.addEventListener("click",(event)=>{const nav=event.target.closest("[data-page]");if(nav){switchPage(nav.dataset.page);return}const action=event.target.closest("[data-action]");if(action&&typeof actions[action.dataset.action]==="function"){actions[action.dataset.action]()}});
+// 1회차 학습 청소는 핵심 CTA라서, 이벤트 위임/터치/겹침 이슈가 있어도 반드시 동작하도록 여러 경로로 직접 연결합니다.
+let lastLearnClickAt=0;
+function triggerLearnButton(event){
+  if(event){
+    event.preventDefault();
+    event.stopPropagation();
+    if(event.stopImmediatePropagation)event.stopImmediatePropagation();
+  }
+  const now=Date.now();
+  if(now-lastLearnClickAt<700)return;
+  lastLearnClickAt=now;
+  if(typeof startFirstMapping==="function")startFirstMapping();
+}
+window.__forceStartFirstMapping=triggerLearnButton;
+const learnBtnDirect=$("learnBtn");
+if(learnBtnDirect){
+  learnBtnDirect.onclick=triggerLearnButton;
+  learnBtnDirect.onpointerdown=triggerLearnButton;
+  learnBtnDirect.onmousedown=triggerLearnButton;
+  learnBtnDirect.ontouchstart=triggerLearnButton;
+  learnBtnDirect.addEventListener("click",triggerLearnButton,true);
+  learnBtnDirect.addEventListener("pointerdown",triggerLearnButton,true);
+  learnBtnDirect.addEventListener("pointerup",triggerLearnButton,true);
+  learnBtnDirect.addEventListener("mousedown",triggerLearnButton,true);
+  learnBtnDirect.addEventListener("touchstart",triggerLearnButton,{capture:true,passive:false});
+  learnBtnDirect.addEventListener("touchend",triggerLearnButton,{capture:true,passive:false});
+}
+document.addEventListener("pointerdown",(event)=>{
+  const btn=event.target && event.target.closest ? event.target.closest("#learnBtn") : null;
+  if(btn)triggerLearnButton(event);
+},true);
+document.addEventListener("touchstart",(event)=>{
+  const target=event.target;
+  const btn=target && target.closest ? target.closest("#learnBtn") : null;
+  if(btn)triggerLearnButton(event);
+},{capture:true,passive:false});
+
 $("modalCancel").addEventListener("click",closeModal);$("modalConfirm").addEventListener("click",()=>modalConfirmHandler());$("modal").addEventListener("click",(event)=>{if(event.target===$("modal"))closeModal()});
 $("targetSlider").addEventListener("input",(event)=>{state.targetSoc=Number(event.target.value);render()});
 $("tempSlider").addEventListener("input",(event)=>{state.temperature=Number(event.target.value);render()});
