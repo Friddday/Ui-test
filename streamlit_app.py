@@ -1377,6 +1377,23 @@ body,button,input,select{
 }
 
 
+/* ===== Map robot marker: 지도 위에서 로보킹이 실제로 움직이며 청소하는 표현 ===== */
+.map-sweep{fill:none;stroke:rgba(255,255,255,.80);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;}
+.map-robot{pointer-events:none;}
+.map-robot-shadow{fill:rgba(64,42,26,.22);}
+.map-robot-shell{fill:#fbfbf8;stroke:#a29b92;stroke-width:1.4;}
+.map-robot-face{fill:#1f2122;}
+.map-robot-eye{fill:#fff;}
+.map-robot-light{fill:#62aa49;animation:mapRobotBlink 1s ease-in-out infinite;}
+.map-robot-body{animation:mapRobotBob .7s ease-in-out infinite;}
+.map-robot-crown{font-size:7px;text-anchor:middle;}
+.map-robot-puff{fill:rgba(255,255,255,.75);animation:mapPuff 1s ease-out infinite;}
+.map-robot-puff.p2{animation-delay:.33s;}
+.map-robot-puff.p3{animation-delay:.66s;}
+@keyframes mapRobotBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.2px)}}
+@keyframes mapRobotBlink{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes mapPuff{0%{opacity:.8;transform:translate(0,0) scale(.5)}100%{opacity:0;transform:translate(-9px,-4px) scale(1.4)}}
+
 /* ===== Top learning / clean action buttons alignment ===== */
 .learn-actions.ready{
   grid-template-columns:1fr 1fr!important;
@@ -2171,6 +2188,7 @@ const state={
   cleaningZones:[],
   currentCleaningZone:null,
   completedZones:[],
+  cleanAnim:null,
   temperature:29,health:100,heart:100,
   level:13,exp:55,coins:50,food:1,cleaning:false,charging:false,
   celebrating:false,progress:0,missionDone:false,cleanCount:0,
@@ -2844,39 +2862,130 @@ function mapRoom(x,y,w,h,rx,zoneNo,label,dashed=false){
 
   return html;
 }
+// 지도 레이아웃(좌표)을 한곳에 모아, 방 그리기와 로봇 위치 계산이 같은 좌표를 쓰도록 합니다.
+const MAP_LAYOUTS={
+  small:{viewBox:"0 0 244 162",label:"소형 집 구조 맵",route:"M42 48 C94 48, 112 96, 176 108",
+    rooms:[[18,18,112,54,12,1,"거실"],[134,18,92,54,12,2,"주방"],[18,76,130,68,12,3,"침실"],[152,76,74,68,12,4,"현관",true]]},
+  medium:{viewBox:"0 0 236 174",label:"중형 집 구조 맵",route:"M48 42 C96 52, 114 94, 182 98 C170 128, 118 138, 64 146",
+    rooms:[[14,14,92,50,12,1,"침실"],[110,14,112,50,12,2,"주방"],[14,68,124,58,12,3,"거실"],[142,68,80,58,12,4,"카펫",true],[14,130,92,32,10,5,"현관"],[110,130,112,32,10,6,"다용도"]]},
+  large:{viewBox:"0 0 246 172",label:"대형 집 구조 맵",route:"M46 34 C96 44, 146 36, 202 36 C174 76, 162 98, 210 92 C166 126, 102 142, 54 140",
+    rooms:[[12,12,72,44,11,1,"침실1"],[88,12,72,44,11,2,"침실2"],[164,12,70,44,11,3,"주방"],[12,60,106,58,12,4,"거실"],[122,60,58,58,12,5,"현관"],[184,60,50,58,12,6,"카펫",true],[12,122,106,38,10,7,"서재"],[122,122,112,38,10,8,"다용도"]]}
+};
+function currentMapLayout(){
+  const area=(activeRun && activeRun.areaPyung) ? activeRun.areaPyung : state.areaPyung;
+  return MAP_LAYOUTS[getHomeSizeType(area)]||MAP_LAYOUTS.large;
+}
+function getZoneRect(zoneNo){
+  const r=currentMapLayout().rooms.find(x=>Number(x[5])===Number(zoneNo));
+  return r?{x:r[0],y:r[1],w:r[2],h:r[3]}:null;
+}
+// 방 안을 지그재그(잔디깎기)로 훑는 경로 꼭짓점들
+function zonePathPoints(rect){
+  const m=11;
+  const x0=rect.x+m,x1=rect.x+rect.w-m,y0=rect.y+m,y1=rect.y+rect.h-m;
+  const rows=Math.max(2,Math.round((y1-y0)/11)+1);
+  const pts=[];
+  for(let r=0;r<rows;r++){
+    const y=y0+(y1-y0)*r/(rows-1);
+    const ltr=r%2===0;
+    pts.push([ltr?x0:x1,y]);pts.push([ltr?x1:x0,y]);
+  }
+  return pts;
+}
+function pointAlong(pts,t){
+  const segs=[];let total=0;
+  for(let i=1;i<pts.length;i++){const d=Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]);segs.push(d);total+=d;}
+  let target=clamp(t,0,1)*total;
+  for(let i=0;i<segs.length;i++){
+    if(target<=segs[i]||i===segs.length-1){
+      const k=segs[i]?Math.min(1,target/segs[i]):1;
+      return {x:pts[i][0]+(pts[i+1][0]-pts[i][0])*k,y:pts[i][1]+(pts[i+1][1]-pts[i][1])*k,dir:Math.sign(pts[i+1][0]-pts[i][0])||1,idx:i};
+    }
+    target-=segs[i];
+  }
+  return {x:pts[0][0],y:pts[0][1],dir:1,idx:0};
+}
+// 화면 진행률(state.progress)은 320ms 단위로 끊겨서, 로봇 아이콘은 시간 기반의 연속 진행률로 움직입니다.
+function getContinuousCleanProgress(){
+  const a=state.cleanAnim;
+  if(!a)return Number(state.progress||0);
+  const e=clamp((Date.now()-a.startedAt)/a.duration,0,1);
+  return Math.min(a.fromProgress+(a.toProgress-a.fromProgress)*e,99.9);
+}
+function getMapRobotPose(){
+  if(!state.cleaning)return null;
+  const zones=(state.cleaningZones&&state.cleaningZones.length)?state.cleaningZones:getCleaningZonesForCurrentPlan();
+  if(!zones.length)return null;
+  const p=getContinuousCleanProgress()/100*zones.length;
+  const idx=Math.min(zones.length-1,Math.floor(p));
+  const sub=p-idx;
+  const rect=getZoneRect(zones[idx]);
+  if(!rect)return null;
+  const pts=zonePathPoints(rect);
+  const TRAVEL=0.16;
+  if(idx>0 && sub<TRAVEL){
+    const prevRect=getZoneRect(zones[idx-1]);
+    const prevPts=prevRect?zonePathPoints(prevRect):pts;
+    const from=prevPts[prevPts.length-1],to=pts[0];
+    const k=sub/TRAVEL;
+    return {x:from[0]+(to[0]-from[0])*k,y:from[1]+(to[1]-from[1])*k,dir:Math.sign(to[0]-from[0])||1,sweep:"",zone:zones[idx],idx:idx};
+  }
+  const t=idx>0?(sub-TRAVEL)/(1-TRAVEL):sub;
+  const pos=pointAlong(pts,t);
+  const swept=pts.slice(0,pos.idx+1).concat([[pos.x,pos.y]]);
+  const d="M"+swept.map(q=>q[0].toFixed(1)+" "+q[1].toFixed(1)).join(" L");
+  return {x:pos.x,y:pos.y,dir:pos.dir,sweep:d,zone:zones[idx],idx:idx};
+}
+function robotTransform(pose){
+  return "translate("+pose.x.toFixed(1)+" "+pose.y.toFixed(1)+") scale("+(pose.dir<0?-1:1)+" 1)";
+}
+function getMapRobotMarkup(){
+  const pose=getMapRobotPose();
+  if(!pose)return "";
+  return "<path id='mapSweep' class='map-sweep' d='"+pose.sweep+"'></path>"
+    +"<g id='mapRobot' class='map-robot' transform='"+robotTransform(pose)+"'>"
+    +"<circle class='map-robot-puff' cx='-9' cy='3' r='2'></circle><circle class='map-robot-puff p2' cx='-10' cy='0' r='1.6'></circle><circle class='map-robot-puff p3' cx='-8' cy='-3' r='1.3'></circle>"
+    +"<ellipse class='map-robot-shadow' cx='0' cy='7.5' rx='8' ry='2.4'></ellipse>"
+    +"<g class='map-robot-body'>"
+    +"<circle r='8.5' class='map-robot-shell'></circle>"
+    +"<rect x='-5.5' y='-0.5' width='11' height='5.5' rx='2.6' class='map-robot-face'></rect>"
+    +"<circle cx='-2.6' cy='2.2' r='1' class='map-robot-eye'></circle><circle cx='2.6' cy='2.2' r='1' class='map-robot-eye'></circle>"
+    +"<circle cx='0' cy='-4.6' r='1.5' class='map-robot-light'></circle>"
+    +"<text class='map-robot-crown' x='0' y='-9'>👑</text>"
+    +"</g></g>";
+}
+let mapRobotRaf=null;
+function tickMapRobot(){
+  mapRobotRaf=null;
+  if(!state.cleaning)return;
+  const pose=getMapRobotPose();
+  if(pose){
+    const g=$("mapRobot"),sw=$("mapSweep");
+    if(g)g.setAttribute("transform",robotTransform(pose));
+    if(sw)sw.setAttribute("d",pose.sweep);
+    // 로봇이 다음 방으로 넘어간 순간 방 강조(초록 깜빡임/✓)도 같이 갱신
+    if(Number(state.currentCleaningZone)!==Number(pose.zone)){
+      const zones=(state.cleaningZones&&state.cleaningZones.length)?state.cleaningZones:getCleaningZonesForCurrentPlan();
+      state.currentCleaningZone=pose.zone;
+      state.completedZones=zones.slice(0,pose.idx);
+      render();
+    }
+  }
+  mapRobotRaf=requestAnimationFrame(tickMapRobot);
+}
+function startMapRobotAnim(){
+  if(mapRobotRaf)cancelAnimationFrame(mapRobotRaf);
+  mapRobotRaf=requestAnimationFrame(tickMapRobot);
+}
 function getMapSvg(type){
+  const lay=MAP_LAYOUTS[type]||MAP_LAYOUTS.large;
   let rooms="";
-  if(type==="small"){
-    rooms += mapRoom(18,18,112,54,12,1,"거실");
-    rooms += mapRoom(134,18,92,54,12,2,"주방");
-    rooms += mapRoom(18,76,130,68,12,3,"침실");
-    rooms += mapRoom(152,76,74,68,12,4,"현관",true);
-    return "<svg class='home-map-svg' viewBox='0 0 244 162' role='img' aria-label='소형 집 구조 맵'>"
-      +"<path class='"+routeClass()+"' d='M42 48 C94 48, 112 96, 176 108'></path>"
-      +rooms+"</svg>";
-  }
-  if(type==="medium"){
-    rooms += mapRoom(14,14,92,50,12,1,"침실");
-    rooms += mapRoom(110,14,112,50,12,2,"주방");
-    rooms += mapRoom(14,68,124,58,12,3,"거실");
-    rooms += mapRoom(142,68,80,58,12,4,"카펫",true);
-    rooms += mapRoom(14,130,92,32,10,5,"현관");
-    rooms += mapRoom(110,130,112,32,10,6,"다용도");
-    return "<svg class='home-map-svg' viewBox='0 0 236 174' role='img' aria-label='중형 집 구조 맵'>"
-      +"<path class='"+routeClass()+"' d='M48 42 C96 52, 114 94, 182 98 C170 128, 118 138, 64 146'></path>"
-      +rooms+"</svg>";
-  }
-  rooms += mapRoom(12,12,72,44,11,1,"침실1");
-  rooms += mapRoom(88,12,72,44,11,2,"침실2");
-  rooms += mapRoom(164,12,70,44,11,3,"주방");
-  rooms += mapRoom(12,60,106,58,12,4,"거실");
-  rooms += mapRoom(122,60,58,58,12,5,"현관");
-  rooms += mapRoom(184,60,50,58,12,6,"카펫",true);
-  rooms += mapRoom(12,122,106,38,10,7,"서재");
-  rooms += mapRoom(122,122,112,38,10,8,"다용도");
-  return "<svg class='home-map-svg' viewBox='0 0 246 172' role='img' aria-label='대형 집 구조 맵'>"
-    +"<path class='"+routeClass()+"' d='M46 34 C96 44, 146 36, 202 36 C174 76, 162 98, 210 92 C166 126, 102 142, 54 140'></path>"
-    +rooms+"</svg>";
+  lay.rooms.forEach(r=>{rooms+=mapRoom(r[0],r[1],r[2],r[3],r[4],r[5],r[6],Boolean(r[7]));});
+  return "<svg class='home-map-svg' viewBox='"+lay.viewBox+"' role='img' aria-label='"+lay.label+"'>"
+    +"<path class='"+routeClass()+"' d='"+lay.route+"'></path>"
+    +rooms
+    +getMapRobotMarkup()
+    +"</svg>";
 }
 function getDirtLegendHtml(){
   return "<div class='map-legend' aria-label='바닥 상태 색상 안내'>"
@@ -4188,7 +4297,10 @@ function startCleaning(){
   const endProgress=segmentWillComplete?100:Math.min(99,startProgress+progressGain);
   const endSoc=Math.max(MIN_RESERVE_SOC,Math.round((startSoc-segmentUse)*10)/10);
   state.cleaningSegmentIndex+=1;
+  // 지도 위 로봇 아이콘을 부드럽게 움직이기 위한 시간 기반 진행 정보
+  state.cleanAnim={startedAt:Date.now(),duration:20*320,fromProgress:startProgress,toProgress:endProgress};
   render();
+  startMapRobotAnim();
   setGuide(state.selectedLabel+" 청소를 시작했어요. 로보킹이 배터리를 아끼면서 깨끗하게 청소할게요.","normal");
   showToast("청소 시작! 로보킹이 배터리를 아끼며 청소해요.");
 
@@ -4206,10 +4318,12 @@ function startCleaning(){
     if(state.soc<=CRITICAL_DOCK_SOC && !segmentWillComplete){
       step=totalSteps;
     }
+    if(state.cleanAnim && step>=totalSteps)state.cleanAnim.duration=Math.max(1,Date.now()-state.cleanAnim.startedAt);
 
     if(step>=totalSteps){
       clearInterval(timer);
       state.cleaning=false;
+      state.cleanAnim=null;
       state.temperature=29;
       state.soc=endSoc;
       const newRemaining=Math.max(0,Math.round((remaining-segmentUse)*10)/10);
